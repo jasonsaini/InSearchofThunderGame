@@ -80,15 +80,15 @@ Material:
     m_Ints: []
     m_Floats:
     - Boolean_8f755de89e184da894125981c4c0ba78: 0
-    - Depth_Fade: 13.3
-    - Smooth: 0.612
-    - Speed: 0.14
+    - Depth_Fade: 9.85
+    - Smooth: 0.825
+    - Speed: 0.13
     - Vector1_309cb8b1b2a4466aa02e543ab0c85a6e: 1
     - Vector1_4d9d83f9939e4caa8b44a1cbb1a0d82e: 0.12
     - Vector1_97655d08d61e40ffa24ba5dfb2fb2508: 2.69
     - Vector1_a1303d1858b74dc3808d8b7858823843: -11.1
-    - Vector1_b477c45853f247c4b3ec903cfac6b438: 1
-    - Vector1_c892da3e47c54e8a865a0935bf75ad0a: 0.07
+    - Vector1_b477c45853f247c4b3ec903cfac6b438: 0.5
+    - Vector1_c892da3e47c54e8a865a0935bf75ad0a: 0.02
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -118,7 +118,7 @@ Material:
     - _ZWrite: 1
     - height: -0.03
     - heightoffset: -2.92
-    - scale: 1.49
+    - scale: 2.36
     - sin_freq: 9.72
     m_Colors:
     - Color_07d66dbf459a427290c7b0403283d67f: {r: 1, g: 1, b: 1, a: 1}
