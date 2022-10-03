@@ -10,11 +10,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _turnSpeed = 360;
     [SerializeField] private float dashSpeed = 10;
 
+    // Added by Declan in case we want to create snappier movement, by snappng movement controller, and slowly turning animation
+    // [SerializeField] private Transform _model;
+
     private Vector3 _input;
 
     private void Start()
     {
         //Physics.IgnoreCollision(playerCollider, GetComponent<Collider>());
+
+        // Automatically assigns the Rigid Body and Collider as those of the GameObject
+        _rb = GetComponent<Rigidbody>();
+        playerCollider = GetComponent<BoxCollider>();
     }
 
     private void Update()

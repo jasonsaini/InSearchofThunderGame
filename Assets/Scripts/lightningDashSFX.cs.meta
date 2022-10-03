@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 27f412da2e16544a2bb678c7a21119a4
+guid: 6aab25536afe34de4991546e3491e9e2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lightningDash: {fileID: 8300000, guid: 49444792d8aeaf94da49257c2de65a61, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
