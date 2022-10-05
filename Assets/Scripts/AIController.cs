@@ -23,7 +23,7 @@ public class AIController : MonoBehaviour
     public Transform[] waypoints;
     int m_CurrentWaypointIndex;
 
-    Vector3 playerLastPosition = Vector3.zero;
+    Vector3 playerLastPosition = GameObject.Find("Player").transform.position;
     Vector3 m_PlayerPosition;
 
     float m_WaitTime;
@@ -71,7 +71,7 @@ public class AIController : MonoBehaviour
     private  void Chasing()
     {
         m_PlayerNear = false;
-        playerLastPosition = Vector3.zero;
+        playerLastPosition = playerLastPosition = GameObject.Find("Player").transform.position;
 
         if (!m_CaughtPlayer)
         {
@@ -119,7 +119,7 @@ public class AIController : MonoBehaviour
         else
         {
             m_PlayerNear = false;
-            playerLastPosition = Vector3.zero;
+            playerLastPosition = playerLastPosition = GameObject.Find("Player").transform.position;
             navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
             if(navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
             {
