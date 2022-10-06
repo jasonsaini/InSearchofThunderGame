@@ -2,27 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private CapsuleCollider playerCollider;
-    [SerializeField] private float _speed = 5;
-    [SerializeField] private float _turnSpeed = 360;
-    [SerializeField] private float dashSpeed = 10;
+    [SerializeField] private float _speed = 12.5f;
+    [SerializeField] private float _turnSpeed = 360f;
+    [SerializeField] private float dashSpeed = 275f;
     // Player attributes
-    [SerializeField] private float Health;
-    [SerializeField] private float Damage;
+    [SerializeField] private float Health = 100f;
+    [SerializeField] private float Damage = 20f;
     private Vector3 _input;
-
+    bool moving;
+    Animator animator;
     private void Start()
     {
+        moving = false;
         //Physics.IgnoreCollision(playerCollider, GetComponent<Collider>());
+        //animator = this.
+        _rb.mass = 5f;
+        _rb.drag = 11f;
+        _rb.angularDrag = 2f;
     }
 
     private void Update()
     {
         GatherInput();
         Look();
+        //animator.SetBool("isWalking", moving);
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
@@ -53,8 +61,9 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        moving = true;
         _rb.MovePosition(transform.position + transform.forward * _input.normalized.magnitude * _speed * Time.deltaTime);
-
+        moving = false;
     }
 
 
