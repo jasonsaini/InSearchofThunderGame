@@ -5,23 +5,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rb;
-    [SerializeField] private BoxCollider playerCollider;
+    [SerializeField] private CapsuleCollider playerCollider;
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _turnSpeed = 360;
     [SerializeField] private float dashSpeed = 10;
-
-    // Added by Declan in case we want to create snappier movement, by snappng movement controller, and slowly turning animation
-    // [SerializeField] private Transform _model;
-
+    // Player attributes
+    [SerializeField] private float Health;
+    [SerializeField] private float Damage;
     private Vector3 _input;
 
     private void Start()
     {
         //Physics.IgnoreCollision(playerCollider, GetComponent<Collider>());
-
-        // Automatically assigns the Rigid Body and Collider as those of the GameObject
-        _rb = GetComponent<Rigidbody>();
-        playerCollider = GetComponent<BoxCollider>();
     }
 
     private void Update()
@@ -30,11 +25,11 @@ public class PlayerController : MonoBehaviour
         Look();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           
+
             _rb.freezeRotation = true;
             _rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
         }
-        
+
 
     }
 
@@ -53,8 +48,7 @@ public class PlayerController : MonoBehaviour
         if (_input == Vector3.zero) return;
 
         var rot = Quaternion.LookRotation(_input.ToIso(), Vector3.up);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, _turnSpeed * Time.deltaTime);
-        transform.rotation = rot;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, _turnSpeed * Time.deltaTime);
     }
 
     private void Move()
@@ -62,8 +56,8 @@ public class PlayerController : MonoBehaviour
         _rb.MovePosition(transform.position + transform.forward * _input.normalized.magnitude * _speed * Time.deltaTime);
 
     }
-    
-    
+
+
 }
 
 
