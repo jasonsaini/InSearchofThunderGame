@@ -3957,7 +3957,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 0.2
     light: {fileID: 500168437490179970}
     randomDistribution: 1
@@ -10023,7 +10023,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 681e411d866a549ff9257b7808507537,
         type: 3}
       propertyPath: m_Name
-      value: WoodenTorch Variant (2)
+      value: WoodenTorch Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 681e411d866a549ff9257b7808507537, type: 3}
