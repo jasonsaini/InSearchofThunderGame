@@ -1,0 +1,2 @@
+* linguist-vendored
+*.shader linguist-vendored=false
