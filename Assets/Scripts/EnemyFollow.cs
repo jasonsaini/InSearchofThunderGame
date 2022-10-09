@@ -24,23 +24,32 @@ public class EnemyFollow : MonoBehaviour
 
     void FixedUpdate()
     {
+        Chase();
+        Attack();
+
+    }
+    void Chase()
+    {
         enemy.SetDestination(player.position);
+    }
+    void Attack()
+    {
+        
         if (enemy.remainingDistance < enemy.stoppingDistance)
         {
-            // START attacking
-            animator.enabled = false;
+            // stop running attacking
             lastEnemyvelocity = enemy.velocity;
             enemy.velocity = Vector3.zero;
-            animator.SetTrigger("Standing Melee Attack Downward");
+            // play attack animation
+            animator.SetTrigger("Attack");
+            // deal damage to player
         }
         else
         {
             animator.enabled = true;
             enemy.velocity = lastEnemyvelocity;
         }
-
     }
-
     void Look()
     {
         this.transform.LookAt(player);
