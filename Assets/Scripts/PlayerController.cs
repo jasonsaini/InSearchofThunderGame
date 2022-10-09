@@ -75,8 +75,9 @@ public class PlayerController : MonoBehaviour
             dashTimer = dashTimerMax;
             dashTimeout = dashTimeoutMax;
             _dashSpeed = _dashSpeedMax;
-            animator.SetTrigger("Dash");
             LightningDashFX.SetActive(true);
+            animator.SetTrigger("Dash");
+            
         }
 
         if (canDash == false) {
