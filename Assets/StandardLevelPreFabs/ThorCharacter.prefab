@@ -1716,7 +1716,7 @@ GameObject:
   - component: {fileID: 4440264570961745065}
   - component: {fileID: 4440264570961745047}
   m_Layer: 7
-  m_Name: Character
+  m_Name: ThorCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1810,7 +1810,7 @@ MonoBehaviour:
   _dashSpeedMax: 3
   dashTimerMax: 0.15
   dashTimeoutMax: 0.8
-  Health: 100
+  health: 100
   Damage: 20
 --- !u!1 &8223921232902436577
 GameObject:
