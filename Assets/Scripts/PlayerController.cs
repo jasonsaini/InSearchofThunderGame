@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private float _turnSpeed = 360f;
 
     // Player Attributes
-    [SerializeField] private float Health = 100f;
+    [SerializeField] public float health = 100f;
     [SerializeField] private float Damage = 20f;
 
     // Temp. Variables
@@ -54,6 +54,12 @@ public class PlayerController : MonoBehaviour
         // Attack; Right-Click
         if (Input.GetMouseButtonDown(1)) {
             animator.SetTrigger("Slash");
+        }
+
+        if(health <= 0)
+        {
+
+            animator.SetTrigger("Dead");
         }
     }
 
