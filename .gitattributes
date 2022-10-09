@@ -1,0 +1,4 @@
+* linguist-vendored
+*.cs linguist-detectable=true
+*.shader linguist-detectable=false
+*.shader linguist-language=C#
