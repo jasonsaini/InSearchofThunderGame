@@ -3,34 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EnemyFollow : MonoBehaviour
+public class MeleeEnemyController : MonoBehaviour
 {
     public Animator animator;
-    public Transform player;
+    public Transform playerLocation;
+    public PlayerController Thor;
     public UnityEngine.AI.NavMeshAgent enemy;
     public Vector3 lastEnemyvelocity;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        // grab player script
+        Thor = (PlayerController)(FindObjectOfType(typeof(PlayerController)));
     }
 
     // Update is called once per frame
     void Update()
     {
         Look();
-        
+        Chase();
+        Attack();
     }
 
     void FixedUpdate()
     {
-        Chase();
-        Attack();
+
+       
 
     }
     void Chase()
     {
-        enemy.SetDestination(player.position);
+        animator.SetBool("Attacking", false);
+        animator.SetBool("Moving", true);
+        enemy.SetDestination(playerLocation.position);
     }
     void Attack()
     {
@@ -41,8 +47,10 @@ public class EnemyFollow : MonoBehaviour
             lastEnemyvelocity = enemy.velocity;
             enemy.velocity = Vector3.zero;
             // play attack animation
-            animator.SetTrigger("Attack");
+            animator.SetBool("Attacking", true);
+            animator.SetBool("Moving", false);
             // deal damage to player
+            //Thor.health -= 1;
         }
         else
         {
@@ -52,6 +60,6 @@ public class EnemyFollow : MonoBehaviour
     }
     void Look()
     {
-        this.transform.LookAt(player);
+        this.transform.LookAt(playerLocation);
     }
 }
