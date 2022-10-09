@@ -12,8 +12,7 @@ public class RangedEnemyAttack : MonoBehaviour
     public float startShotInterval;
 
     public GameObject projectile;
-
-    public Transform player;
+     public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +35,19 @@ public class RangedEnemyAttack : MonoBehaviour
         else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        Vector3 projectilePos;
+        if (shotInterval <= 0)
+        {
+            projectilePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            
+            Instantiate(projectile, projectilePos, Quaternion.identity);
+            shotInterval = startShotInterval;
+        }
+        else
+        {
+            shotInterval -= Time.deltaTime;
         }
     }
 }
