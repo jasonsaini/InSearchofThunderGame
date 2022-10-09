@@ -31,6 +31,7 @@ public class EnemyFollow : MonoBehaviour
             animator.enabled = false;
             lastEnemyvelocity = enemy.velocity;
             enemy.velocity = Vector3.zero;
+            animator.SetTrigger("Standing Melee Attack Downward");
         }
         else
         {
