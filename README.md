@@ -4,7 +4,7 @@
 ## Contributors:
 ### Jason Saini -  Project Manager, AI Lead, Gameplay Development. 
 ### Declan Carter - Environment, Graphics, Animations Lead.
-### (We both oversee and contribute to all areas of development)
+#### (We both oversee and contribute to all areas of development)
 
 
 Minimum Requirements:
