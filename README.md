@@ -7,7 +7,7 @@
 ## Contributors:
 
 ### [Jason Saini](https://www.github.com/jasonsaini) -  Project Manager, AI Lead, Gameplay Development. 
-### [Declan Carter](https://www.github.com/AmericanFencer) - Environment, Graphics, Animations Lead.
+### [Declan Carter](https://www.github.com/AmericanFencer) - Environment, Graphics/Animations Lead, Gameplay Development
 #### (We both oversee and contribute to all areas of development)
 
 ## Technologies:
