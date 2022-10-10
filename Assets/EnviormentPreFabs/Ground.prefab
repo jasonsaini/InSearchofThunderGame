@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3400800691226633704}
   - component: {fileID: 3400800691226633705}
   - component: {fileID: 3400800691226633710}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: SnowNoise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d43374b62c4613bc175a6512e7d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowBreaker: {fileID: 0}
   xSize: 80
   zSize: 80
   amplitude: 0.5
