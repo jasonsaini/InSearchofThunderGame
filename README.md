@@ -9,6 +9,11 @@
 
 
 ## Minimum Requirements / Features:
-[ ]
-[ ]
-- [ ] Win/Lose States
+- [X] Isometric Camera / Movement
+- [X] Dash Feature
+- [X] Win/Lose States
+- [X] Melee Enemies
+- [ ] Ranged Enemies
+- [ ] Particle Effects
+- [ ] Sound FX, Music
+- [ ] Boss Encounters
