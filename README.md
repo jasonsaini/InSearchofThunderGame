@@ -1,4 +1,4 @@
-#🌩️ In Search of Thunder 🌩️
+# 🌩️ In Search of Thunder 🌩️
 ## A 3D isometric action-adventure game inspired by Hades!
 
 ## Contributors:
