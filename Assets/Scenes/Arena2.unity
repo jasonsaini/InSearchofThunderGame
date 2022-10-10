@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.124521, g: 0.18120378, b: 0.26298547, a: 1}
+  m_IndirectSpecularColor: {r: 0.124239944, g: 0.18104434, b: 0.26285878, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19576,7 +19576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4163706531932942, guid: e218b66930d51a741a5150ddb1bfeec0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.65
+      value: 2.59
       objectReference: {fileID: 0}
     - target: {fileID: 4163706531932942, guid: e218b66930d51a741a5150ddb1bfeec0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19683,7 +19683,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854220203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7b254a0450d32458d97999646cb331, type: 3}
   m_Name: 
@@ -19693,6 +19693,25 @@ MonoBehaviour:
   enemy: {fileID: 1854220207}
   lastEnemyvelocity: {x: 0, y: 0, z: 0}
   distFromPlayer: {x: 0, y: 0, z: 0}
+--- !u!114 &1854220209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854220203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f06f2b98d15493499b9f92b61bfdf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  stoppingDistance: 6
+  retreatDistance: 10
+  shotInterval: 0
+  startShotInterval: 2
+  projectile: {fileID: 1925348658}
+  player: {fileID: 5684539720023634179}
 --- !u!1 &1854230063
 GameObject:
   m_ObjectHideFlags: 0
@@ -20236,6 +20255,132 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1919960855}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1925348658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925348659}
+  - component: {fileID: 1925348663}
+  - component: {fileID: 1925348662}
+  - component: {fileID: 1925348661}
+  - component: {fileID: 1925348660}
+  - component: {fileID: 1925348664}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1925348659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925348658}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 1.23, z: -0.08}
+  m_LocalScale: {x: 0.5234506, y: 0.5234506, z: 0.5234506}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1854220202}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1925348660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925348658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &1925348661
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925348658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1925348662
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925348658}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1925348663
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925348658}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1925348664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925348658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b798f8baff3f04cb6570e5ea2b12fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  player: {fileID: 5684539720023634179}
 --- !u!1 &1926307029
 GameObject:
   m_ObjectHideFlags: 0
@@ -26759,12 +26904,12 @@ PrefabInstance:
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23519199
+      value: 0.23519197
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3700757
+      value: 0.37007567
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
