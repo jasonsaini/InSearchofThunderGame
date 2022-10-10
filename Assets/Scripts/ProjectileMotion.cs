@@ -7,27 +7,33 @@ public class ProjectileMotion : MonoBehaviour
     public float speed;
     private Transform player;
     private Vector3 target;
+    private PlayerController playerAttributes;
+    private Rigidbody _rb;
     // Start is called before the first frame update
     void Start()
     {
-        target = new Vector3(player.position.x, player.position.y, player.position.z);
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerAttributes = GameObject.Find("Thor").GetComponent<PlayerController>();
+        player = GameObject.Find("Thor").transform;
+        target = new Vector3(player.position.x, player.position.y + 2, player.position.z);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        if(transform.position.x == target.x && transform.position.y == target.y)
+        if(transform.position == target)
         {
             DestroyProjectile();
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            playerAttributes.health -= 30;
             DestroyProjectile();
         }
     }

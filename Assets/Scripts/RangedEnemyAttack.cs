@@ -41,8 +41,8 @@ public class RangedEnemyAttack : MonoBehaviour
         if (shotInterval <= 0)
         {
             projectilePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-            
-            Instantiate(projectile, projectilePos, Quaternion.identity);
+            transform.LookAt(player);
+            Instantiate(projectile, projectilePos, transform.rotation);
             shotInterval = startShotInterval;
         }
         else

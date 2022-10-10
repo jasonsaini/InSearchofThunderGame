@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // Player Attributes
     [SerializeField] public float health = 100f;
     [SerializeField] private float Damage = 20f;
-
+    private bool dead;
     // Temp. Variables
     private Vector3 _input;
     bool moving = false;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        dead = false;
         // Fetch Objects
         animator = GetComponentInChildren<Animator>();
     }
@@ -41,31 +43,38 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        GatherInput();
-        Look();
-        Dash();
-
-        // Attack; Left-Click
-        if (Input.GetMouseButtonDown(0))
+        if (!dead)
         {
-            animator.SetTrigger("Slash");
+            GatherInput();
+            Look();
+            Dash();
+
+            // Attack; Left-Click
+            if (Input.GetMouseButtonDown(0))
+            {
+                animator.SetTrigger("Slash");
+            }
+
+            // Attack; Right-Click
+            if (Input.GetMouseButtonDown(1))
+            {
+                animator.SetTrigger("Slash");
+            }
         }
 
-        // Attack; Right-Click
-        if (Input.GetMouseButtonDown(1)) {
-            animator.SetTrigger("Slash");
-        }
 
-        if(health <= 0)
-        {
-
-            animator.SetTrigger("Dead");
-        }
     }
 
     private void FixedUpdate()
     {
         Move();
+
+        if (health <= 0)
+        {
+
+            animator.SetTrigger("Dead");
+            dead = true;            
+        }
     }
 
     private void GatherInput()
