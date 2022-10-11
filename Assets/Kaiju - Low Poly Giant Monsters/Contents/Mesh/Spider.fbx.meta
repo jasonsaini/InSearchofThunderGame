@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: b447b97219d98314b9d01ae113a9886f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Abdomen
+    100002: Abdomen_end
+    100004: Giant Spider
+    100006: LeftLeg 1
+    100008: LeftLeg 1 End
+    100010: LeftLeg 1 End_end
+    100012: LeftLeg 1 Middle
+    100014: LeftLeg 2
+    100016: LeftLeg 2 End
+    100018: LeftLeg 2 End_end
+    100020: LeftLeg 2 Middle
+    100022: LeftLeg 3
+    100024: LeftLeg 3 End
+    100026: LeftLeg 3 End_end
+    100028: LeftLeg 3 Middle
+    100030: LeftLeg 4
+    100032: LeftLeg 4 End
+    100034: LeftLeg 4 End_end
+    100036: LeftLeg 4 Middle
+    100038: RightLeg 1
+    100040: RightLeg 1 End
+    100042: RightLeg 1 End_end
+    100044: RightLeg 1 Middle
+    100046: RightLeg 2
+    100048: RightLeg 2 End
+    100050: RightLeg 2 End_end
+    100052: RightLeg 2 Middle
+    100054: RightLeg 3
+    100056: RightLeg 3 End
+    100058: RightLeg 3 End_end
+    100060: RightLeg 3 Middle
+    100062: RightLeg 4
+    100064: RightLeg 4 End
+    100066: RightLeg 4 End_end
+    100068: RightLeg 4 Middle
+    100070: //RootNode
+    100072: Spider
+    100074: Spider Bones
+    400000: Abdomen
+    400002: Abdomen_end
+    400004: Giant Spider
+    400006: LeftLeg 1
+    400008: LeftLeg 1 End
+    400010: LeftLeg 1 End_end
+    400012: LeftLeg 1 Middle
+    400014: LeftLeg 2
+    400016: LeftLeg 2 End
+    400018: LeftLeg 2 End_end
+    400020: LeftLeg 2 Middle
+    400022: LeftLeg 3
+    400024: LeftLeg 3 End
+    400026: LeftLeg 3 End_end
+    400028: LeftLeg 3 Middle
+    400030: LeftLeg 4
+    400032: LeftLeg 4 End
+    400034: LeftLeg 4 End_end
+    400036: LeftLeg 4 Middle
+    400038: RightLeg 1
+    400040: RightLeg 1 End
+    400042: RightLeg 1 End_end
+    400044: RightLeg 1 Middle
+    400046: RightLeg 2
+    400048: RightLeg 2 End
+    400050: RightLeg 2 End_end
+    400052: RightLeg 2 Middle
+    400054: RightLeg 3
+    400056: RightLeg 3 End
+    400058: RightLeg 3 End_end
+    400060: RightLeg 3 Middle
+    400062: RightLeg 4
+    400064: RightLeg 4 End
+    400066: RightLeg 4 End_end
+    400068: RightLeg 4 Middle
+    400070: //RootNode
+    400072: Spider
+    400074: Spider Bones
+    2100000: Body
+    2100002: Material
+    2100004: Eye
+    2100006: Body.001
+    4300000: Giant Spider
+    9500000: //RootNode
+    13700000: Giant Spider
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

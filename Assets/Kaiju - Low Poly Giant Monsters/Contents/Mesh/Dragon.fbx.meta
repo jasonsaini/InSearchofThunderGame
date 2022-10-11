@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 3e0e22fe92425b34ab6af7d45e4d46cc
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: BezierCurve
+    100004: Cylinder.001
+    100006: Cylinder.002
+    100008: //RootNode
+    100010: Head
+    100012: Head_end
+    100014: Lower Jaw
+    100016: Lower Jaw_end
+    100018: Neck
+    100020: Spine 01
+    100022: Spine 01_end
+    100024: Spine 02
+    100026: Spine 03
+    100028: Spine 04
+    100030: Spine 05
+    100032: Spine 06
+    100034: Spine 07
+    100036: Spine 08
+    100038: Spine 09
+    100040: Spine 10
+    100042: Spine 11
+    100044: Spine 12
+    100046: Spine 13
+    100048: Spine 14
+    100050: Spine 15
+    100052: Spine 16
+    100054: Neck_end
+    100056: Spine 02_end
+    100058: Spine 03_end
+    100060: Spine 04_end
+    100062: Spine 05_end
+    100064: Spine 06_end
+    100066: Spine 07_end
+    100068: Spine 08_end
+    100070: Spine 09_end
+    100072: Spine 10_end
+    100074: Spine 11_end
+    100076: Spine 12_end
+    100078: Spine 13_end
+    100080: Spine 14_end
+    100082: Spine 15_end
+    100084: Spine 16_end
+    100086: Dragon
+    100088: Dragon Bones
+    400000: Armature
+    400002: BezierCurve
+    400004: Cylinder.001
+    400006: Cylinder.002
+    400008: //RootNode
+    400010: Head
+    400012: Head_end
+    400014: Lower Jaw
+    400016: Lower Jaw_end
+    400018: Neck
+    400020: Spine 01
+    400022: Spine 01_end
+    400024: Spine 02
+    400026: Spine 03
+    400028: Spine 04
+    400030: Spine 05
+    400032: Spine 06
+    400034: Spine 07
+    400036: Spine 08
+    400038: Spine 09
+    400040: Spine 10
+    400042: Spine 11
+    400044: Spine 12
+    400046: Spine 13
+    400048: Spine 14
+    400050: Spine 15
+    400052: Spine 16
+    400054: Neck_end
+    400056: Spine 02_end
+    400058: Spine 03_end
+    400060: Spine 04_end
+    400062: Spine 05_end
+    400064: Spine 06_end
+    400066: Spine 07_end
+    400068: Spine 08_end
+    400070: Spine 09_end
+    400072: Spine 10_end
+    400074: Spine 11_end
+    400076: Spine 12_end
+    400078: Spine 13_end
+    400080: Spine 14_end
+    400082: Spine 15_end
+    400084: Spine 16_end
+    400086: Dragon
+    400088: Dragon Bones
+    2100000: No Name
+    2100002: Teeth
+    2100004: Mouth
+    2100006: Scale 2
+    2100008: Horns
+    2100010: Scale 1
+    2100012: Scale 3
+    2100014: Nose
+    2100016: Eyes
+    2300000: BezierCurve
+    3300000: BezierCurve
+    4300000: BezierCurve
+    4300002: Cylinder.001
+    4300004: Cylinder.002
+    4300006: Dragon
+    9500000: //RootNode
+    13700000: Cylinder.001
+    13700002: Cylinder.002
+    13700004: Dragon
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

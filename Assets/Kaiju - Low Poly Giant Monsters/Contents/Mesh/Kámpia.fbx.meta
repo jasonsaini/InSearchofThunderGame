@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: 4a5e2d80ceb8de3459ff397e4252eb04
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Body 01
+    100004: Body 01_end
+    100006: Body 02
+    100008: Body 02_end
+    100010: Body 03
+    100012: Body 03_end
+    100014: Body 04
+    100016: Body 04_end
+    100018: Body 05
+    100020: Body 05_end
+    100022: Body 06
+    100024: Body 06_end
+    100026: Body 07
+    100028: Body 07_end
+    100030: Body 08
+    100032: Body 08_end
+    100034: Body 09
+    100036: Body 09_end
+    100038: Body 10
+    100040: Body 10_end
+    100042: Body 11
+    100044: Body 11_end
+    100046: Body 12
+    100048: Body 12_end
+    100050: Body 13
+    100052: Body 13_end
+    100054: Body 14
+    100056: Body 14_end
+    100058: Body 15
+    100060: Body 15_end
+    100062: Body 16
+    100064: Body 16_end
+    100066: Body 17
+    100068: Body 17_end
+    100070: Body 18
+    100072: Body 18_end
+    100074: Body 19
+    100076: Body 19_end
+    100078: Body 20
+    100080: Body 20_end
+    100082: Body 21
+    100084: Body 21_end
+    100086: Body 22
+    100088: Body 22_end
+    100090: Body 23
+    100092: Body 23_end
+    100094: Body 24
+    100096: Body 24_end
+    100098: Body 25
+    100100: Body 25_end
+    100102: Body 26
+    100104: Body 26_end
+    100106: Body 27
+    100108: Body 27_end
+    100110: Body 28
+    100112: Body 28_end
+    100114: Body 29
+    100116: Body 29_end
+    100118: Body 30
+    100120: Body 30_end
+    100122: Head
+    100124: Head_end
+    100126: "K\xE1mpia"
+    100128: //RootNode
+    400000: Armature
+    400002: Body 01
+    400004: Body 01_end
+    400006: Body 02
+    400008: Body 02_end
+    400010: Body 03
+    400012: Body 03_end
+    400014: Body 04
+    400016: Body 04_end
+    400018: Body 05
+    400020: Body 05_end
+    400022: Body 06
+    400024: Body 06_end
+    400026: Body 07
+    400028: Body 07_end
+    400030: Body 08
+    400032: Body 08_end
+    400034: Body 09
+    400036: Body 09_end
+    400038: Body 10
+    400040: Body 10_end
+    400042: Body 11
+    400044: Body 11_end
+    400046: Body 12
+    400048: Body 12_end
+    400050: Body 13
+    400052: Body 13_end
+    400054: Body 14
+    400056: Body 14_end
+    400058: Body 15
+    400060: Body 15_end
+    400062: Body 16
+    400064: Body 16_end
+    400066: Body 17
+    400068: Body 17_end
+    400070: Body 18
+    400072: Body 18_end
+    400074: Body 19
+    400076: Body 19_end
+    400078: Body 20
+    400080: Body 20_end
+    400082: Body 21
+    400084: Body 21_end
+    400086: Body 22
+    400088: Body 22_end
+    400090: Body 23
+    400092: Body 23_end
+    400094: Body 24
+    400096: Body 24_end
+    400098: Body 25
+    400100: Body 25_end
+    400102: Body 26
+    400104: Body 26_end
+    400106: Body 27
+    400108: Body 27_end
+    400110: Body 28
+    400112: Body 28_end
+    400114: Body 29
+    400116: Body 29_end
+    400118: Body 30
+    400120: Body 30_end
+    400122: Head
+    400124: Head_end
+    400126: //RootNode
+    400128: "K\xE1mpia"
+    2100000: Fin
+    2100002: Skin 1
+    2100004: Eye
+    2100006: Stone
+    2100008: Teeth
+    2100010: Grass
+    4300000: "K\xE1mpia"
+    9500000: //RootNode
+    13700000: "K\xE1mpia"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye
+    second: {fileID: 2100000, guid: 1923b28aa9d2f0446873425fcc62b41e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fin
+    second: {fileID: 2100000, guid: 637f6636752d3854381203dfdc2d958c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 8c7848e1e1fd56942952135751ffa87b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin 1
+    second: {fileID: 2100000, guid: 7fec15a43094d0140ab839e84c6cd0a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 538b9b2fde105364086ebbf99b47799c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: d39aa44cc1a430f469ed582a8fee2525, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

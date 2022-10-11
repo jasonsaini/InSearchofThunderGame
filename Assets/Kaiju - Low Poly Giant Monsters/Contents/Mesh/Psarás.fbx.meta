@@ -1,0 +1,322 @@
+fileFormatVersion: 2
+guid: 414c3b9dcd32f2d498e44d824335c6b7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armature
+    100004: Body 01
+    100006: Body 01_end
+    100008: Body 02
+    100010: Body 02_end
+    100012: Body 03
+    100014: Body 03_end
+    100016: Body 04
+    100018: Body 04_end
+    100020: Body 05
+    100022: Body 05_end
+    100024: Body 06
+    100026: Body 06_end
+    100028: Body 07
+    100030: Body 07_end
+    100032: Body 08
+    100034: Body 08_end
+    100036: Body 09
+    100038: Body 09_end
+    100040: Body 10
+    100042: Body 10_end
+    100044: Body 11
+    100046: Body 11_end
+    100048: Body 12
+    100050: Body 12_end
+    100052: Body 13
+    100054: Body 13_end
+    100056: Body 14
+    100058: Body 14_end
+    100060: Body 15
+    100062: Body 15_end
+    100064: Body 16
+    100066: Body 16_end
+    100068: Body 17
+    100070: Body 17_end
+    100072: Body 18
+    100074: Body 18_end
+    100076: Body 19
+    100078: Body 19_end
+    100080: Body 20
+    100082: Body 20_end
+    100084: Body 21
+    100086: Body 21_end
+    100088: Body 22
+    100090: Body 22_end
+    100092: Body 23
+    100094: Body 23_end
+    100096: Body 24
+    100098: Body 24_end
+    100100: Body 25
+    100102: Body 25_end
+    100104: Body 26
+    100106: Body 26_end
+    100108: Body 27
+    100110: Body 27_end
+    100112: Body 28
+    100114: Body 28_end
+    100116: Body 29
+    100118: Body 29_end
+    100120: Body 30
+    100122: Body 30_end
+    100124: Body 31
+    100126: Body 31_end
+    100128: Body 32
+    100130: Body 32_end
+    100132: Body 33
+    100134: Body 33_end
+    100136: Body 34
+    100138: Body 34_end
+    100140: Body 35
+    100142: Body 35_end
+    100144: Body 36
+    100146: Body 36_end
+    100148: Body 37
+    100150: Body 37_end
+    100152: Body 38
+    100154: Body 38_end
+    100156: Body 39
+    100158: Body 39_end
+    100160: Head
+    100162: Jaw
+    100164: Jaw_end
+    100166: Psaras
+    400000: //RootNode
+    400002: Armature
+    400004: Body 01
+    400006: Body 01_end
+    400008: Body 02
+    400010: Body 02_end
+    400012: Body 03
+    400014: Body 03_end
+    400016: Body 04
+    400018: Body 04_end
+    400020: Body 05
+    400022: Body 05_end
+    400024: Body 06
+    400026: Body 06_end
+    400028: Body 07
+    400030: Body 07_end
+    400032: Body 08
+    400034: Body 08_end
+    400036: Body 09
+    400038: Body 09_end
+    400040: Body 10
+    400042: Body 10_end
+    400044: Body 11
+    400046: Body 11_end
+    400048: Body 12
+    400050: Body 12_end
+    400052: Body 13
+    400054: Body 13_end
+    400056: Body 14
+    400058: Body 14_end
+    400060: Body 15
+    400062: Body 15_end
+    400064: Body 16
+    400066: Body 16_end
+    400068: Body 17
+    400070: Body 17_end
+    400072: Body 18
+    400074: Body 18_end
+    400076: Body 19
+    400078: Body 19_end
+    400080: Body 20
+    400082: Body 20_end
+    400084: Body 21
+    400086: Body 21_end
+    400088: Body 22
+    400090: Body 22_end
+    400092: Body 23
+    400094: Body 23_end
+    400096: Body 24
+    400098: Body 24_end
+    400100: Body 25
+    400102: Body 25_end
+    400104: Body 26
+    400106: Body 26_end
+    400108: Body 27
+    400110: Body 27_end
+    400112: Body 28
+    400114: Body 28_end
+    400116: Body 29
+    400118: Body 29_end
+    400120: Body 30
+    400122: Body 30_end
+    400124: Body 31
+    400126: Body 31_end
+    400128: Body 32
+    400130: Body 32_end
+    400132: Body 33
+    400134: Body 33_end
+    400136: Body 34
+    400138: Body 34_end
+    400140: Body 35
+    400142: Body 35_end
+    400144: Body 36
+    400146: Body 36_end
+    400148: Body 37
+    400150: Body 37_end
+    400152: Body 38
+    400154: Body 38_end
+    400156: Body 39
+    400158: Body 39_end
+    400160: Head
+    400162: Jaw
+    400164: Jaw_end
+    400166: Psaras
+    2100000: Tentacle
+    2100002: Mouth
+    2100004: Belly
+    2100006: Skin
+    2100008: FIn
+    2100010: Dorsal
+    2100012: Light
+    2100014: Teeth
+    2100016: Pupil
+    2300000: //RootNode
+    2300002: Psaras
+    3300000: //RootNode
+    3300002: Psaras
+    4300000: Cube
+    4300002: Psaras
+    9500000: //RootNode
+    13700000: Psaras
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Belly
+    second: {fileID: 2100000, guid: cf367a87fcaebc04ca947dc1e95bee4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dorsal
+    second: {fileID: 2100000, guid: 2b17f0908cd0bf144bb8ac7426ea828c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FIn
+    second: {fileID: 2100000, guid: 4389a652147878547ae01df734298ce4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: be6fbfd49b52f3c478bbd1e059e2963a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth
+    second: {fileID: 2100000, guid: 38b39836256e5f14cb57615abd4f1627, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupil
+    second: {fileID: 2100000, guid: 85b210910ae11ca469d30715ec5fa7b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: ad8d826e3db38464995ef29edf786392, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: f77506c025e01114990079ca766bdd10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tentacle
+    second: {fileID: 2100000, guid: 86ca6f9d8c950454192bbd152c5cb5f2, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.005
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

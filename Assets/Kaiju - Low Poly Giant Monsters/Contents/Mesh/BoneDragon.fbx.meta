@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: a33f36e78d779af4db2d5c3e7d5f0e17
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Dragon
+    100004: Head
+    100006: Lower Jaw
+    100008: Lower Jaw_end
+    100010: Neck
+    100012: Neck_end
+    100014: Spine.001
+    100016: Spine.001_end
+    100018: Spine.002
+    100020: Spine.002_end
+    100022: Spine.003
+    100024: Spine.003_end
+    100026: Spine.004
+    100028: Spine.004_end
+    100030: Spine.005
+    100032: Spine.005_end
+    100034: Spine.006
+    100036: Spine.006_end
+    100038: Spine.007
+    100040: Spine.007_end
+    100042: Spine.008
+    100044: Spine.008_end
+    100046: Spine.009
+    100048: Spine.009_end
+    100050: Spine.010
+    100052: Spine.010_end
+    100054: Spine.011
+    100056: Spine.011_end
+    100058: Spine.012
+    100060: Spine.012_end
+    100062: Spine.013
+    100064: Spine.013_end
+    100066: Spine.014
+    100068: Spine.014_end
+    100070: Spine.015
+    100072: Spine.015_end
+    100074: Spine.016
+    100076: Spine.016_end
+    100078: Spine.017
+    100080: Spine.017_end
+    100082: Spine.018
+    100084: Spine.018_end
+    100086: Dragon Bones
+    100088: Bone Dragon
+    100090: Spine 01
+    100092: Spine 01_end
+    100094: Spine 02
+    100096: Spine 02_end
+    100098: Spine 03
+    100100: Spine 03_end
+    100102: Spine 04
+    100104: Spine 04_end
+    100106: Spine 05
+    100108: Spine 05_end
+    100110: Spine 06
+    100112: Spine 06_end
+    100114: Spine 07
+    100116: Spine 07_end
+    100118: Spine 08
+    100120: Spine 08_end
+    100122: Spine 09
+    100124: Spine 09_end
+    100126: Spine 10
+    100128: Spine 10_end
+    100130: Spine 11
+    100132: Spine 11_end
+    100134: Spine 12
+    100136: Spine 12_end
+    100138: Spine 13
+    100140: Spine 13_end
+    100142: Spine 14
+    100144: Spine 14_end
+    100146: Spine 15
+    100148: Spine 15_end
+    100150: Spine 16
+    100152: Spine 16_end
+    100154: Spine 17
+    100156: Spine 17_end
+    100158: Spine 18
+    100160: Spine 18_end
+    400000: //RootNode
+    400002: Dragon
+    400004: Head
+    400006: Lower Jaw
+    400008: Lower Jaw_end
+    400010: Neck
+    400012: Neck_end
+    400014: Spine.001
+    400016: Spine.001_end
+    400018: Spine.002
+    400020: Spine.002_end
+    400022: Spine.003
+    400024: Spine.003_end
+    400026: Spine.004
+    400028: Spine.004_end
+    400030: Spine.005
+    400032: Spine.005_end
+    400034: Spine.006
+    400036: Spine.006_end
+    400038: Spine.007
+    400040: Spine.007_end
+    400042: Spine.008
+    400044: Spine.008_end
+    400046: Spine.009
+    400048: Spine.009_end
+    400050: Spine.010
+    400052: Spine.010_end
+    400054: Spine.011
+    400056: Spine.011_end
+    400058: Spine.012
+    400060: Spine.012_end
+    400062: Spine.013
+    400064: Spine.013_end
+    400066: Spine.014
+    400068: Spine.014_end
+    400070: Spine.015
+    400072: Spine.015_end
+    400074: Spine.016
+    400076: Spine.016_end
+    400078: Spine.017
+    400080: Spine.017_end
+    400082: Spine.018
+    400084: Spine.018_end
+    400086: Dragon Bones
+    400088: Bone Dragon
+    400090: Spine 01
+    400092: Spine 01_end
+    400094: Spine 02
+    400096: Spine 02_end
+    400098: Spine 03
+    400100: Spine 03_end
+    400102: Spine 04
+    400104: Spine 04_end
+    400106: Spine 05
+    400108: Spine 05_end
+    400110: Spine 06
+    400112: Spine 06_end
+    400114: Spine 07
+    400116: Spine 07_end
+    400118: Spine 08
+    400120: Spine 08_end
+    400122: Spine 09
+    400124: Spine 09_end
+    400126: Spine 10
+    400128: Spine 10_end
+    400130: Spine 11
+    400132: Spine 11_end
+    400134: Spine 12
+    400136: Spine 12_end
+    400138: Spine 13
+    400140: Spine 13_end
+    400142: Spine 14
+    400144: Spine 14_end
+    400146: Spine 15
+    400148: Spine 15_end
+    400150: Spine 16
+    400152: Spine 16_end
+    400154: Spine 17
+    400156: Spine 17_end
+    400158: Spine 18
+    400160: Spine 18_end
+    2100000: Nose
+    2100002: Mouth
+    2100004: Eyes
+    2100006: Scale 1
+    2100008: Teeth
+    2100010: Scale 3
+    2300000: Dragon
+    2300002: Bone Dragon
+    3300000: Dragon
+    3300002: Bone Dragon
+    4300000: Dragon
+    4300002: Bone Dragon
+    9500000: //RootNode
+    13700000: Bone Dragon
+    13700002: Dragon
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

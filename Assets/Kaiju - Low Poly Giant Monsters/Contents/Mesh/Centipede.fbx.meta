@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 8b746453c2a83e84bbac7b6e930ae29f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Centipede
+    100004: Centipede Bones
+    100006: Head
+    100008: Head_end
+    100010: Spine 1
+    100012: Spine 1 Leg 1 Left
+    100014: Spine 1 Leg 1 Right
+    100016: Spine 1 Leg 2 Left
+    100018: Spine 1 Leg 2 Right
+    100020: Spine 1 Leg 3 Left
+    100022: Spine 1 Leg 3 Left_end
+    100024: Spine 1 Leg 3 Right
+    100026: Spine 1 Leg 3 Right_end
+    100028: Spine 2
+    100030: Spine 2 Leg 1 Left
+    100032: Spine 2 Leg 1 Right
+    100034: Spine 2 Leg 2 Left
+    100036: Spine 2 Leg 2 Right
+    100038: Spine 2 Leg 3 Left
+    100040: Spine 2 Leg 3 Left_end
+    100042: Spine 2 Leg 3 Right
+    100044: Spine 2 Leg 3 Right_end
+    100046: Spine 3
+    100048: Spine 3 Leg 1 Left
+    100050: Spine 3 Leg 1 Right
+    100052: Spine 3 Leg 2 Left
+    100054: Spine 3 Leg 2 Right
+    100056: Spine 3 Leg 3 Left
+    100058: Spine 3 Leg 3 Left_end
+    100060: Spine 3 Leg 3 Right
+    100062: Spine 3 Leg 3 Right_end
+    100064: Spine 4
+    100066: Spine 4 Leg 1 Left
+    100068: Spine 4 Leg 1 Right
+    100070: Spine 4 Leg 2 Left
+    100072: Spine 4 Leg 2 Right
+    100074: Spine 4 Leg 3 Left
+    100076: Spine 4 Leg 3 Left_end
+    100078: Spine 4 Leg 3 Right
+    100080: Spine 4 Leg 3 Right_end
+    100082: Spine 5
+    100084: Spine 5 Leg 1 Left
+    100086: Spine 5 Leg 1 Right
+    100088: Spine 5 Leg 2 Left
+    100090: Spine 5 Leg 2 Right
+    100092: Spine 5 Leg 3 Left
+    100094: Spine 5 Leg 3 Left_end
+    100096: Spine 5 Leg 3 Right
+    100098: Spine 5 Leg 3 Right_end
+    100100: Spine 6
+    100102: Spine 6 Leg 1 Left
+    100104: Spine 6 Leg 1 Right
+    100106: Spine 6 Leg 2 Left
+    100108: Spine 6 Leg 2 Right
+    100110: Spine 6 Leg 3 Left
+    100112: Spine 6 Leg 3 Left_end
+    100114: Spine 6 Leg 3 Right
+    100116: Spine 6 Leg 3 Right_end
+    100118: Spine 7
+    100120: Spine 7 Leg 1 Left
+    100122: Spine 7 Leg 1 Right
+    100124: Spine 7 Leg 2 Left
+    100126: Spine 7 Leg 2 Right
+    100128: Spine 7 Leg 3 Left
+    100130: Spine 7 Leg 3 Left_end
+    100132: Spine 7 Leg 3 Right
+    100134: Spine 7 Leg 3 Right_end
+    100136: Spine 8
+    100138: Spine 8 Leg 1 Left
+    100140: Spine 8 Leg 1 Right
+    100142: Spine 8 Leg 2 Left
+    100144: Spine 8 Leg 2 Right
+    100146: Spine 8 Leg 3 Left
+    100148: Spine 8 Leg 3 Left_end
+    100150: Spine 8 Leg 3 Right
+    100152: Spine 8 Leg 3 Right_end
+    100154: Tail
+    100156: Tail_end
+    400000: //RootNode
+    400002: Centipede
+    400004: Centipede Bones
+    400006: Head
+    400008: Head_end
+    400010: Spine 1
+    400012: Spine 1 Leg 1 Left
+    400014: Spine 1 Leg 1 Right
+    400016: Spine 1 Leg 2 Left
+    400018: Spine 1 Leg 2 Right
+    400020: Spine 1 Leg 3 Left
+    400022: Spine 1 Leg 3 Left_end
+    400024: Spine 1 Leg 3 Right
+    400026: Spine 1 Leg 3 Right_end
+    400028: Spine 2
+    400030: Spine 2 Leg 1 Left
+    400032: Spine 2 Leg 1 Right
+    400034: Spine 2 Leg 2 Left
+    400036: Spine 2 Leg 2 Right
+    400038: Spine 2 Leg 3 Left
+    400040: Spine 2 Leg 3 Left_end
+    400042: Spine 2 Leg 3 Right
+    400044: Spine 2 Leg 3 Right_end
+    400046: Spine 3
+    400048: Spine 3 Leg 1 Left
+    400050: Spine 3 Leg 1 Right
+    400052: Spine 3 Leg 2 Left
+    400054: Spine 3 Leg 2 Right
+    400056: Spine 3 Leg 3 Left
+    400058: Spine 3 Leg 3 Left_end
+    400060: Spine 3 Leg 3 Right
+    400062: Spine 3 Leg 3 Right_end
+    400064: Spine 4
+    400066: Spine 4 Leg 1 Left
+    400068: Spine 4 Leg 1 Right
+    400070: Spine 4 Leg 2 Left
+    400072: Spine 4 Leg 2 Right
+    400074: Spine 4 Leg 3 Left
+    400076: Spine 4 Leg 3 Left_end
+    400078: Spine 4 Leg 3 Right
+    400080: Spine 4 Leg 3 Right_end
+    400082: Spine 5
+    400084: Spine 5 Leg 1 Left
+    400086: Spine 5 Leg 1 Right
+    400088: Spine 5 Leg 2 Left
+    400090: Spine 5 Leg 2 Right
+    400092: Spine 5 Leg 3 Left
+    400094: Spine 5 Leg 3 Left_end
+    400096: Spine 5 Leg 3 Right
+    400098: Spine 5 Leg 3 Right_end
+    400100: Spine 6
+    400102: Spine 6 Leg 1 Left
+    400104: Spine 6 Leg 1 Right
+    400106: Spine 6 Leg 2 Left
+    400108: Spine 6 Leg 2 Right
+    400110: Spine 6 Leg 3 Left
+    400112: Spine 6 Leg 3 Left_end
+    400114: Spine 6 Leg 3 Right
+    400116: Spine 6 Leg 3 Right_end
+    400118: Spine 7
+    400120: Spine 7 Leg 1 Left
+    400122: Spine 7 Leg 1 Right
+    400124: Spine 7 Leg 2 Left
+    400126: Spine 7 Leg 2 Right
+    400128: Spine 7 Leg 3 Left
+    400130: Spine 7 Leg 3 Left_end
+    400132: Spine 7 Leg 3 Right
+    400134: Spine 7 Leg 3 Right_end
+    400136: Spine 8
+    400138: Spine 8 Leg 1 Left
+    400140: Spine 8 Leg 1 Right
+    400142: Spine 8 Leg 2 Left
+    400144: Spine 8 Leg 2 Right
+    400146: Spine 8 Leg 3 Left
+    400148: Spine 8 Leg 3 Left_end
+    400150: Spine 8 Leg 3 Right
+    400152: Spine 8 Leg 3 Right_end
+    400154: Tail
+    400156: Tail_end
+    2100000: Armor
+    2100002: Skin
+    2100004: Mouth
+    2100006: Spike
+    4300000: Centipede
+    9500000: //RootNode
+    13700000: Centipede
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

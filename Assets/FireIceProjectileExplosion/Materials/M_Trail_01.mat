@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Trail_01
+  m_Shader: {fileID: 4800000, guid: 611f6c893519f874cb39adbb6db99682, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaMask:
+        m_Texture: {fileID: 2800000, guid: abaf76e832f6c744d8e610c661b33c5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e8f3ef115095458489f7aed93f543497, type: 3}
+        m_Scale: {x: 0.57, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseAlphaMask:
+        m_Texture: {fileID: 2800000, guid: e8f3ef115095458489f7aed93f543497, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseMainTex:
+        m_Texture: {fileID: 2800000, guid: e8f3ef115095458489f7aed93f543497, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubAlphaMask:
+        m_Texture: {fileID: 2800000, guid: d64f36f5b6c08884980e170b4e9a6f5c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _T_Horizontal_111:
+        m_Texture: {fileID: 2800000, guid: abaf76e832f6c744d8e610c661b33c5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Turbulence_043_c:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Add_Blend: 1
+    - _CullMode: 0
+    - _NoiseAlphaMaskStrength: 0.15
+    - _NoiseStrengthMainTex: 0.09
+    - __dirty: 0
+    m_Colors:
+    - _Color0: {r: 0.6037736, g: 0.031327877, b: 0.031327877, a: 0}
+    - _SpeedDirAlphaMask: {r: 0, g: 0, b: 0, a: 0}
+    - _SpeedDirMainTex: {r: -1, g: 0, b: 0, a: 0}
+    - _SpeedDirNoiseAlphaMask: {r: 0, g: 0, b: 0, a: 0}
+    - _SpeedDirNoiseMainTex: {r: 0, g: 0, b: 0, a: 0}
+    - _SpeedDirSubAlphaMask: {r: 1, g: 0, b: 0, a: 0}
+    - _Tint: {r: 3.901525, g: 3.901525, b: 3.901525, a: 1}
+    - _Tint_01: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint_02: {r: 1, g: 1, b: 1, a: 0}

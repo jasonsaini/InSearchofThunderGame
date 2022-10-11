@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: 2919b96b43cb2b54d97d2e76a11b75e0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Aeropod
+    100002: Armature
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.005
+    100014: Bone.006
+    100016: Bone.007
+    100018: Bone.008
+    100020: Left Tendril 1
+    100022: Left Tendril 1_end
+    100024: Left Tendril 2
+    100026: Left Tendril 2_end
+    100028: Left Tendril 3
+    100030: Left Tendril 3_end
+    100032: Left Tendril 4
+    100034: Left Tendril 4_end
+    100036: Left Tendril 5
+    100038: Left Tendril 5_end
+    100040: Left WIng 1 Bone.001
+    100042: Left WIng 1 Bone.002
+    100044: Left WIng 1 Bone.003
+    100046: Left WIng 1 Bone.004
+    100048: Left WIng 1 Bone.005
+    100050: Left WIng 1 Bone.006
+    100052: Left WIng 1 Bone.007
+    100054: Left WIng 1 Bone.008
+    100056: Left WIng 2 Bone.001
+    100058: Left WIng 2 Bone.002
+    100060: Left WIng 2 Bone.003
+    100062: Left WIng 2 Bone.004
+    100064: Left WIng 2 Bone.005
+    100066: Left WIng 2 Bone.006
+    100068: Left WIng 2 Bone.007
+    100070: Left WIng 2 Bone.008
+    100072: Left WIng 3 Bone.001
+    100074: Left WIng 3 Bone.001_end
+    100076: Left WIng 3 Bone.002
+    100078: Left WIng 3 Bone.002_end
+    100080: Left WIng 3 Bone.003
+    100082: Left WIng 3 Bone.003_end
+    100084: Left WIng 3 Bone.004
+    100086: Left WIng 3 Bone.004_end
+    100088: Left WIng 3 Bone.005
+    100090: Left WIng 3 Bone.005_end
+    100092: Left WIng 3 Bone.006
+    100094: Left WIng 3 Bone.006_end
+    100096: Left WIng 3 Bone.007
+    100098: Left WIng 3 Bone.007_end
+    100100: Left WIng 3 Bone.008
+    100102: Left WIng 3 Bone.008_end
+    100104: Right Tendril 1
+    100106: Right Tendril 1_end
+    100108: Right Tendril 2
+    100110: Right Tendril 2_end
+    100112: Right Tendril 3
+    100114: Right Tendril 3_end
+    100116: Right Tendril 4
+    100118: Right Tendril 4_end
+    100120: Right Tendril 5
+    100122: Right Tendril 5_end
+    100124: Right WIng 1 Bone.001
+    100126: Right WIng 1 Bone.002
+    100128: Right WIng 1 Bone.003
+    100130: Right WIng 1 Bone.004
+    100132: Right WIng 1 Bone.005
+    100134: Right WIng 1 Bone.006
+    100136: Right WIng 1 Bone.007
+    100138: Right WIng 1 Bone.008
+    100140: Right WIng 2 Bone.001
+    100142: Right WIng 2 Bone.002
+    100144: Right WIng 2 Bone.003
+    100146: Right WIng 2 Bone.004
+    100148: Right WIng 2 Bone.005
+    100150: Right WIng 2 Bone.006
+    100152: Right WIng 2 Bone.007
+    100154: Right WIng 2 Bone.008
+    100156: Right WIng 3 Bone.001
+    100158: Right WIng 3 Bone.001_end
+    100160: Right WIng 3 Bone.002
+    100162: Right WIng 3 Bone.002_end
+    100164: Right WIng 3 Bone.003
+    100166: Right WIng 3 Bone.003_end
+    100168: Right WIng 3 Bone.004
+    100170: Right WIng 3 Bone.004_end
+    100172: Right WIng 3 Bone.005
+    100174: Right WIng 3 Bone.005_end
+    100176: Right WIng 3 Bone.006
+    100178: Right WIng 3 Bone.006_end
+    100180: Right WIng 3 Bone.007
+    100182: Right WIng 3 Bone.007_end
+    100184: Right WIng 3 Bone.008
+    100186: Right WIng 3 Bone.008_end
+    100188: //RootNode
+    100190: Left WIng 1 Spine 1
+    100192: Left WIng 1 Spine 2
+    100194: Left WIng 1 Spine 3
+    100196: Left WIng 1 Spine 4
+    100198: Left WIng 1 Spine 5
+    100200: Left WIng 1 Spine 6
+    100202: Left WIng 1 Spine 7
+    100204: Left WIng 1 Spine 8
+    100206: Left WIng 2 Spine 1
+    100208: Left WIng 2 Spine 2
+    100210: Left WIng 2 Spine 3
+    100212: Left WIng 2 Spine 4
+    100214: Left WIng 2 Spine 5
+    100216: Left WIng 2 Spine 6
+    100218: Left WIng 2 Spine 7
+    100220: Left WIng 2 Spine 8
+    100222: Left WIng 3 Spine 1
+    100224: Left WIng 3 Spine 1_end
+    100226: Left WIng 3 Spine 2
+    100228: Left WIng 3 Spine 2_end
+    100230: Left WIng 3 Spine 3
+    100232: Left WIng 3 Spine 3_end
+    100234: Left WIng 3 Spine 4
+    100236: Left WIng 3 Spine 4_end
+    100238: Left WIng 3 Spine 5
+    100240: Left WIng 3 Spine 5_end
+    100242: Left WIng 3 Spine 6
+    100244: Left WIng 3 Spine 6_end
+    100246: Left WIng 3 Spine 7
+    100248: Left WIng 3 Spine 7_end
+    100250: Left WIng 3 Spine 8
+    100252: Left WIng 3 Spine 8_end
+    100254: Right WIng 1 Spine 1
+    100256: Right WIng 1 Spine 2
+    100258: Right WIng 1 Spine 3
+    100260: Right WIng 1 Spine 4
+    100262: Right WIng 1 Spine 5
+    100264: Right WIng 1 Spine 6
+    100266: Right WIng 1 Spine 7
+    100268: Right WIng 1 Spine 8
+    100270: Right WIng 2 Spine 1
+    100272: Right WIng 2 Spine 2
+    100274: Right WIng 2 Spine 3
+    100276: Right WIng 2 Spine 4
+    100278: Right WIng 2 Spine 5
+    100280: Right WIng 2 Spine 6
+    100282: Right WIng 2 Spine 7
+    100284: Right WIng 2 Spine 8
+    100286: Right WIng 3 Spine 1
+    100288: Right WIng 3 Spine 1_end
+    100290: Right WIng 3 Spine 2
+    100292: Right WIng 3 Spine 2_end
+    100294: Right WIng 3 Spine 3
+    100296: Right WIng 3 Spine 3_end
+    100298: Right WIng 3 Spine 4
+    100300: Right WIng 3 Spine 4_end
+    100302: Right WIng 3 Spine 5
+    100304: Right WIng 3 Spine 5_end
+    100306: Right WIng 3 Spine 6
+    100308: Right WIng 3 Spine 6_end
+    100310: Right WIng 3 Spine 7
+    100312: Right WIng 3 Spine 7_end
+    100314: Right WIng 3 Spine 8
+    100316: Right WIng 3 Spine 8_end
+    100318: Spine 1
+    100320: Spine 2
+    100322: Spine 3
+    100324: Spine 4
+    100326: Spine 5
+    100328: Spine 6
+    100330: Spine 7
+    100332: Spine 8
+    100334: Left Wing 1 Spine 1
+    100336: Left Wing 1 Spine 2
+    100338: Left Wing 1 Spine 3
+    100340: Left Wing 1 Spine 4
+    100342: Left Wing 1 Spine 5
+    100344: Left Wing 1 Spine 6
+    100346: Left Wing 1 Spine 7
+    100348: Left Wing 1 Spine 8
+    100350: Left Wing 2 Spine 1
+    100352: Left Wing 2 Spine 2
+    100354: Left Wing 2 Spine 3
+    100356: Left Wing 2 Spine 4
+    100358: Left Wing 2 Spine 5
+    100360: Left Wing 2 Spine 6
+    100362: Left Wing 2 Spine 7
+    100364: Left Wing 2 Spine 8
+    100366: Left Wing 3 Spine 1
+    100368: Left Wing 3 Spine 1_end
+    100370: Left Wing 3 Spine 2
+    100372: Left Wing 3 Spine 2_end
+    100374: Left Wing 3 Spine 3
+    100376: Left Wing 3 Spine 3_end
+    100378: Left Wing 3 Spine 4
+    100380: Left Wing 3 Spine 4_end
+    100382: Left Wing 3 Spine 5
+    100384: Left Wing 3 Spine 5_end
+    100386: Left Wing 3 Spine 6
+    100388: Left Wing 3 Spine 6_end
+    100390: Left Wing 3 Spine 7
+    100392: Left Wing 3 Spine 7_end
+    100394: Left Wing 3 Spine 8
+    100396: Left Wing 3 Spine 8_end
+    100398: Right Wing 1 Spine 1
+    100400: Right Wing 1 Spine 2
+    100402: Right Wing 1 Spine 3
+    100404: Right Wing 1 Spine 4
+    100406: Right Wing 1 Spine 5
+    100408: Right Wing 1 Spine 6
+    100410: Right Wing 1 Spine 7
+    100412: Right Wing 1 Spine 8
+    100414: Right Wing 2 Spine 1
+    100416: Right Wing 2 Spine 2
+    100418: Right Wing 2 Spine 3
+    100420: Right Wing 2 Spine 4
+    100422: Right Wing 2 Spine 5
+    100424: Right Wing 2 Spine 6
+    100426: Right Wing 2 Spine 7
+    100428: Right Wing 2 Spine 8
+    100430: Right Wing 3 Spine 1
+    100432: Right Wing 3 Spine 1_end
+    100434: Right Wing 3 Spine 2
+    100436: Right Wing 3 Spine 2_end
+    100438: Right Wing 3 Spine 3
+    100440: Right Wing 3 Spine 3_end
+    100442: Right Wing 3 Spine 4
+    100444: Right Wing 3 Spine 4_end
+    100446: Right Wing 3 Spine 5
+    100448: Right Wing 3 Spine 5_end
+    100450: Right Wing 3 Spine 6
+    100452: Right Wing 3 Spine 6_end
+    100454: Right Wing 3 Spine 7
+    100456: Right Wing 3 Spine 7_end
+    100458: Right Wing 3 Spine 8
+    100460: Right Wing 3 Spine 8_end
+    400000: Aeropod
+    400002: Armature
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.005
+    400014: Bone.006
+    400016: Bone.007
+    400018: Bone.008
+    400020: Left Tendril 1
+    400022: Left Tendril 1_end
+    400024: Left Tendril 2
+    400026: Left Tendril 2_end
+    400028: Left Tendril 3
+    400030: Left Tendril 3_end
+    400032: Left Tendril 4
+    400034: Left Tendril 4_end
+    400036: Left Tendril 5
+    400038: Left Tendril 5_end
+    400040: Left WIng 1 Bone.001
+    400042: Left WIng 1 Bone.002
+    400044: Left WIng 1 Bone.003
+    400046: Left WIng 1 Bone.004
+    400048: Left WIng 1 Bone.005
+    400050: Left WIng 1 Bone.006
+    400052: Left WIng 1 Bone.007
+    400054: Left WIng 1 Bone.008
+    400056: Left WIng 2 Bone.001
+    400058: Left WIng 2 Bone.002
+    400060: Left WIng 2 Bone.003
+    400062: Left WIng 2 Bone.004
+    400064: Left WIng 2 Bone.005
+    400066: Left WIng 2 Bone.006
+    400068: Left WIng 2 Bone.007
+    400070: Left WIng 2 Bone.008
+    400072: Left WIng 3 Bone.001
+    400074: Left WIng 3 Bone.001_end
+    400076: Left WIng 3 Bone.002
+    400078: Left WIng 3 Bone.002_end
+    400080: Left WIng 3 Bone.003
+    400082: Left WIng 3 Bone.003_end
+    400084: Left WIng 3 Bone.004
+    400086: Left WIng 3 Bone.004_end
+    400088: Left WIng 3 Bone.005
+    400090: Left WIng 3 Bone.005_end
+    400092: Left WIng 3 Bone.006
+    400094: Left WIng 3 Bone.006_end
+    400096: Left WIng 3 Bone.007
+    400098: Left WIng 3 Bone.007_end
+    400100: Left WIng 3 Bone.008
+    400102: Left WIng 3 Bone.008_end
+    400104: Right Tendril 1
+    400106: Right Tendril 1_end
+    400108: Right Tendril 2
+    400110: Right Tendril 2_end
+    400112: Right Tendril 3
+    400114: Right Tendril 3_end
+    400116: Right Tendril 4
+    400118: Right Tendril 4_end
+    400120: Right Tendril 5
+    400122: Right Tendril 5_end
+    400124: Right WIng 1 Bone.001
+    400126: Right WIng 1 Bone.002
+    400128: Right WIng 1 Bone.003
+    400130: Right WIng 1 Bone.004
+    400132: Right WIng 1 Bone.005
+    400134: Right WIng 1 Bone.006
+    400136: Right WIng 1 Bone.007
+    400138: Right WIng 1 Bone.008
+    400140: Right WIng 2 Bone.001
+    400142: Right WIng 2 Bone.002
+    400144: Right WIng 2 Bone.003
+    400146: Right WIng 2 Bone.004
+    400148: Right WIng 2 Bone.005
+    400150: Right WIng 2 Bone.006
+    400152: Right WIng 2 Bone.007
+    400154: Right WIng 2 Bone.008
+    400156: Right WIng 3 Bone.001
+    400158: Right WIng 3 Bone.001_end
+    400160: Right WIng 3 Bone.002
+    400162: Right WIng 3 Bone.002_end
+    400164: Right WIng 3 Bone.003
+    400166: Right WIng 3 Bone.003_end
+    400168: Right WIng 3 Bone.004
+    400170: Right WIng 3 Bone.004_end
+    400172: Right WIng 3 Bone.005
+    400174: Right WIng 3 Bone.005_end
+    400176: Right WIng 3 Bone.006
+    400178: Right WIng 3 Bone.006_end
+    400180: Right WIng 3 Bone.007
+    400182: Right WIng 3 Bone.007_end
+    400184: Right WIng 3 Bone.008
+    400186: Right WIng 3 Bone.008_end
+    400188: //RootNode
+    400190: Left WIng 1 Spine 1
+    400192: Left WIng 1 Spine 2
+    400194: Left WIng 1 Spine 3
+    400196: Left WIng 1 Spine 4
+    400198: Left WIng 1 Spine 5
+    400200: Left WIng 1 Spine 6
+    400202: Left WIng 1 Spine 7
+    400204: Left WIng 1 Spine 8
+    400206: Left WIng 2 Spine 1
+    400208: Left WIng 2 Spine 2
+    400210: Left WIng 2 Spine 3
+    400212: Left WIng 2 Spine 4
+    400214: Left WIng 2 Spine 5
+    400216: Left WIng 2 Spine 6
+    400218: Left WIng 2 Spine 7
+    400220: Left WIng 2 Spine 8
+    400222: Left WIng 3 Spine 1
+    400224: Left WIng 3 Spine 1_end
+    400226: Left WIng 3 Spine 2
+    400228: Left WIng 3 Spine 2_end
+    400230: Left WIng 3 Spine 3
+    400232: Left WIng 3 Spine 3_end
+    400234: Left WIng 3 Spine 4
+    400236: Left WIng 3 Spine 4_end
+    400238: Left WIng 3 Spine 5
+    400240: Left WIng 3 Spine 5_end
+    400242: Left WIng 3 Spine 6
+    400244: Left WIng 3 Spine 6_end
+    400246: Left WIng 3 Spine 7
+    400248: Left WIng 3 Spine 7_end
+    400250: Left WIng 3 Spine 8
+    400252: Left WIng 3 Spine 8_end
+    400254: Right WIng 1 Spine 1
+    400256: Right WIng 1 Spine 2
+    400258: Right WIng 1 Spine 3
+    400260: Right WIng 1 Spine 4
+    400262: Right WIng 1 Spine 5
+    400264: Right WIng 1 Spine 6
+    400266: Right WIng 1 Spine 7
+    400268: Right WIng 1 Spine 8
+    400270: Right WIng 2 Spine 1
+    400272: Right WIng 2 Spine 2
+    400274: Right WIng 2 Spine 3
+    400276: Right WIng 2 Spine 4
+    400278: Right WIng 2 Spine 5
+    400280: Right WIng 2 Spine 6
+    400282: Right WIng 2 Spine 7
+    400284: Right WIng 2 Spine 8
+    400286: Right WIng 3 Spine 1
+    400288: Right WIng 3 Spine 1_end
+    400290: Right WIng 3 Spine 2
+    400292: Right WIng 3 Spine 2_end
+    400294: Right WIng 3 Spine 3
+    400296: Right WIng 3 Spine 3_end
+    400298: Right WIng 3 Spine 4
+    400300: Right WIng 3 Spine 4_end
+    400302: Right WIng 3 Spine 5
+    400304: Right WIng 3 Spine 5_end
+    400306: Right WIng 3 Spine 6
+    400308: Right WIng 3 Spine 6_end
+    400310: Right WIng 3 Spine 7
+    400312: Right WIng 3 Spine 7_end
+    400314: Right WIng 3 Spine 8
+    400316: Right WIng 3 Spine 8_end
+    400318: Spine 1
+    400320: Spine 2
+    400322: Spine 3
+    400324: Spine 4
+    400326: Spine 5
+    400328: Spine 6
+    400330: Spine 7
+    400332: Spine 8
+    400334: Left Wing 1 Spine 1
+    400336: Left Wing 1 Spine 2
+    400338: Left Wing 1 Spine 3
+    400340: Left Wing 1 Spine 4
+    400342: Left Wing 1 Spine 5
+    400344: Left Wing 1 Spine 6
+    400346: Left Wing 1 Spine 7
+    400348: Left Wing 1 Spine 8
+    400350: Left Wing 2 Spine 1
+    400352: Left Wing 2 Spine 2
+    400354: Left Wing 2 Spine 3
+    400356: Left Wing 2 Spine 4
+    400358: Left Wing 2 Spine 5
+    400360: Left Wing 2 Spine 6
+    400362: Left Wing 2 Spine 7
+    400364: Left Wing 2 Spine 8
+    400366: Left Wing 3 Spine 1
+    400368: Left Wing 3 Spine 1_end
+    400370: Left Wing 3 Spine 2
+    400372: Left Wing 3 Spine 2_end
+    400374: Left Wing 3 Spine 3
+    400376: Left Wing 3 Spine 3_end
+    400378: Left Wing 3 Spine 4
+    400380: Left Wing 3 Spine 4_end
+    400382: Left Wing 3 Spine 5
+    400384: Left Wing 3 Spine 5_end
+    400386: Left Wing 3 Spine 6
+    400388: Left Wing 3 Spine 6_end
+    400390: Left Wing 3 Spine 7
+    400392: Left Wing 3 Spine 7_end
+    400394: Left Wing 3 Spine 8
+    400396: Left Wing 3 Spine 8_end
+    400398: Right Wing 1 Spine 1
+    400400: Right Wing 1 Spine 2
+    400402: Right Wing 1 Spine 3
+    400404: Right Wing 1 Spine 4
+    400406: Right Wing 1 Spine 5
+    400408: Right Wing 1 Spine 6
+    400410: Right Wing 1 Spine 7
+    400412: Right Wing 1 Spine 8
+    400414: Right Wing 2 Spine 1
+    400416: Right Wing 2 Spine 2
+    400418: Right Wing 2 Spine 3
+    400420: Right Wing 2 Spine 4
+    400422: Right Wing 2 Spine 5
+    400424: Right Wing 2 Spine 6
+    400426: Right Wing 2 Spine 7
+    400428: Right Wing 2 Spine 8
+    400430: Right Wing 3 Spine 1
+    400432: Right Wing 3 Spine 1_end
+    400434: Right Wing 3 Spine 2
+    400436: Right Wing 3 Spine 2_end
+    400438: Right Wing 3 Spine 3
+    400440: Right Wing 3 Spine 3_end
+    400442: Right Wing 3 Spine 4
+    400444: Right Wing 3 Spine 4_end
+    400446: Right Wing 3 Spine 5
+    400448: Right Wing 3 Spine 5_end
+    400450: Right Wing 3 Spine 6
+    400452: Right Wing 3 Spine 6_end
+    400454: Right Wing 3 Spine 7
+    400456: Right Wing 3 Spine 7_end
+    400458: Right Wing 3 Spine 8
+    400460: Right Wing 3 Spine 8_end
+    2100000: Wings
+    2100002: Accent
+    2100004: Light
+    4300000: Aeropod
+    9500000: //RootNode
+    13700000: Aeropod
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - Aeropod
+    - Armature
+    - Armature/Left Tendril 2
+    - Armature/Left Tendril 3
+    - Armature/Left Tendril 4
+    - Armature/Left Tendril 5
+    - Armature/Right Tendril 2
+    - Armature/Right Tendril 3
+    - Armature/Right Tendril 4
+    - Armature/Right Tendril 5
+    - Armature/Spine 1
+    - Armature/Spine 1/Left Wing 1 Spine 1
+    - Armature/Spine 1/Left Wing 1 Spine 1/Left Wing 2 Spine 1
+    - Armature/Spine 1/Left Wing 1 Spine 1/Left Wing 2 Spine 1/Left Wing 3 Spine 1
+    - Armature/Spine 1/Right Wing 1 Spine 1
+    - Armature/Spine 1/Right Wing 1 Spine 1/Right Wing 2 Spine 1
+    - Armature/Spine 1/Right Wing 1 Spine 1/Right Wing 2 Spine 1/Right Wing 3 Spine
+      1
+    - Armature/Spine 2
+    - Armature/Spine 2/Left Wing 1 Spine 2
+    - Armature/Spine 2/Left Wing 1 Spine 2/Left Wing 2 Spine 2
+    - Armature/Spine 2/Left Wing 1 Spine 2/Left Wing 2 Spine 2/Left Wing 3 Spine 2
+    - Armature/Spine 2/Right Wing 1 Spine 2
+    - Armature/Spine 2/Right Wing 1 Spine 2/Right Wing 2 Spine 2
+    - Armature/Spine 2/Right Wing 1 Spine 2/Right Wing 2 Spine 2/Right Wing 3 Spine
+      2
+    - Armature/Spine 3
+    - Armature/Spine 3/Left Wing 1 Spine 3
+    - Armature/Spine 3/Left Wing 1 Spine 3/Left Wing 2 Spine 3
+    - Armature/Spine 3/Left Wing 1 Spine 3/Left Wing 2 Spine 3/Left Wing 3 Spine 3
+    - Armature/Spine 3/Right Wing 1 Spine 3
+    - Armature/Spine 3/Right Wing 1 Spine 3/Right Wing 2 Spine 3
+    - Armature/Spine 3/Right Wing 1 Spine 3/Right Wing 2 Spine 3/Right Wing 3 Spine
+      3
+    - Armature/Spine 4
+    - Armature/Spine 4/Left Wing 1 Spine 4
+    - Armature/Spine 4/Left Wing 1 Spine 4/Left Wing 2 Spine 4
+    - Armature/Spine 4/Left Wing 1 Spine 4/Left Wing 2 Spine 4/Left Wing 3 Spine 4
+    - Armature/Spine 4/Right Wing 1 Spine 4
+    - Armature/Spine 4/Right Wing 1 Spine 4/Right Wing 2 Spine 4
+    - Armature/Spine 4/Right Wing 1 Spine 4/Right Wing 2 Spine 4/Right Wing 3 Spine
+      4
+    - Armature/Spine 5
+    - Armature/Spine 5/Left Wing 1 Spine 5
+    - Armature/Spine 5/Left Wing 1 Spine 5/Left Wing 2 Spine 5
+    - Armature/Spine 5/Left Wing 1 Spine 5/Left Wing 2 Spine 5/Left Wing 3 Spine 5
+    - Armature/Spine 5/Right Wing 1 Spine 5
+    - Armature/Spine 5/Right Wing 1 Spine 5/Right Wing 2 Spine 5
+    - Armature/Spine 5/Right Wing 1 Spine 5/Right Wing 2 Spine 5/Right Wing 3 Spine
+      5
+    - Armature/Spine 6
+    - Armature/Spine 6/Left Wing 1 Spine 6
+    - Armature/Spine 6/Left Wing 1 Spine 6/Left Wing 2 Spine 6
+    - Armature/Spine 6/Left Wing 1 Spine 6/Left Wing 2 Spine 6/Left Wing 3 Spine 6
+    - Armature/Spine 6/Right Wing 1 Spine 6
+    - Armature/Spine 6/Right Wing 1 Spine 6/Right Wing 2 Spine 6
+    - Armature/Spine 6/Right Wing 1 Spine 6/Right Wing 2 Spine 6/Right Wing 3 Spine
+      6
+    - Armature/Spine 7
+    - Armature/Spine 7/Left Wing 1 Spine 7
+    - Armature/Spine 7/Left Wing 1 Spine 7/Left Wing 2 Spine 7
+    - Armature/Spine 7/Left Wing 1 Spine 7/Left Wing 2 Spine 7/Left Wing 3 Spine 7
+    - Armature/Spine 7/Right Wing 1 Spine 7
+    - Armature/Spine 7/Right Wing 1 Spine 7/Right Wing 2 Spine 7
+    - Armature/Spine 7/Right Wing 1 Spine 7/Right Wing 2 Spine 7/Right Wing 3 Spine
+      7
+    - Armature/Spine 8
+    - Armature/Spine 8/Left Tendril 1
+    - Armature/Spine 8/Left Wing 1 Spine 8
+    - Armature/Spine 8/Left Wing 1 Spine 8/Left Wing 2 Spine 8
+    - Armature/Spine 8/Left Wing 1 Spine 8/Left Wing 2 Spine 8/Left Wing 3 Spine 8
+    - Armature/Spine 8/Right Tendril 1
+    - Armature/Spine 8/Right Wing 1 Spine 8
+    - Armature/Spine 8/Right Wing 1 Spine 8/Right Wing 2 Spine 8
+    - Armature/Spine 8/Right Wing 1 Spine 8/Right Wing 2 Spine 8/Right Wing 3 Spine
+      8
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
