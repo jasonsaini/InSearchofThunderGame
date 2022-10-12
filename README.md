@@ -17,13 +17,27 @@
 ![Perforce Helix](https://img.shields.io/badge/-PERFORCE%20HELIX-00AEEF?style=for-the-badge&logo=Perforce&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-## Minimum Requirements / Features:
+# TODO:
 - [X] Isometric Camera / Movement
 - [X] Dash Feature
 - [X] Win/Lose States
-- [X] Ranged Enemies
-- [ ] Melee Enemies
+  - [] Reward player with damage / health buff (they choose)
+  - [] Game Over Screen -> restart arena
+- [ ] Fundamental Enemy AI Behaviour
+   - [X] Ranged Enemies
+   - [ ] Melee Enemies
+ - [ ] Combat Foundations 
+   - [ ] Implement Weapon/Appendage Colliders
+   - [ ] Tune damage dealt & received
+   - [ ] Iterate combat mechanics
+        - [ ] Boomerang throw (throw & recall hammer)
+        - [ ] Teleport to hammer 
+## Graphics / VFX : 
 - [ ] Polished Animations
+  - [ ] Idle Ranged Enemy Animation
+  - [ ] Replace Combat Animations
+  - [ ] Tweak Dash Animation
+  
 - [ ] Particle Effects
 - [ ] Sound FX, Music
 - [ ] Boss Encounters
