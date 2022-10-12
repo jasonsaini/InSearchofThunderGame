@@ -21,8 +21,8 @@
 - [X] Isometric Camera / Movement
 - [X] Dash Feature
 - [X] Win/Lose States
-  - [] Reward player with damage / health buff (they choose)
-  - [] Game Over Screen -> restart arena
+  - [ ] Reward player with damage / health buff (they choose)
+  - [ ] Game Over Screen -> restart arena or debuff health / damage
 - [ ] Fundamental Enemy AI Behaviour
    - [X] Ranged Enemies
    - [ ] Melee Enemies
@@ -32,12 +32,25 @@
    - [ ] Iterate combat mechanics
         - [ ] Boomerang throw (throw & recall hammer)
         - [ ] Teleport to hammer 
-## Graphics / VFX : 
-- [ ] Polished Animations
-  - [ ] Idle Ranged Enemy Animation
-  - [ ] Replace Combat Animations
-  - [ ] Tweak Dash Animation
-  
-- [ ] Particle Effects
+- [ ] Graphics / VFX : 
+  - [ ] Polished Animations
+    - [ ] Idle Ranged Enemy Animation
+    - [ ] Replace Combat Animations
+    - [ ] Tweak Dash Animation
+  - [ ] Particle Effects
 - [ ] Sound FX, Music
+  - [ ] Ambient Music -> Combat -> Back to Ambient
+  - [ ] Enemy Sound Effects
+     - [ ] Damage Received
+     - [ ] Damage Dealt
+     - [ ] Chasing
+  - [ ] Player Sound Effects
+    - [ ] Running
+    - [ ] Damage Dealt
+    - [ ] Damage Received
 - [ ] Boss Encounters
+    - [ ] OP "Big Bad"
+       - [ ] Follow Player
+       - [ ] Instant Elimination
+       - [ ] Final Boss Fight
+
