@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // Player Attributes
     [SerializeField] public float health = 100f;
     [SerializeField] private float Damage = 20f;
+    [SerializeField] public float attackCooldown = 1.0f;
     private bool dead;
     // Temp. Variables
     private Vector3 _input;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private float _dashSpeed = 1f;
     private float dashTimeout;
 
+    public bool canAttack = true;
     private void Start()
     {
         dead = false;
@@ -49,17 +51,22 @@ public class PlayerController : MonoBehaviour
             Look();
             Dash();
 
-            // Attack; Left-Click
-            if (Input.GetMouseButtonDown(0))
+            if (canAttack)
             {
-                animator.SetTrigger("Slash");
+                // Attack; Left-Click
+                if (Input.GetMouseButtonDown(0))
+                {
+                    animator.SetTrigger("Slash");
+                }
+
+                // Attack; Right-Click
+                if (Input.GetMouseButtonDown(1))
+                {
+                    animator.SetTrigger("Slash");
+                }
+
             }
 
-            // Attack; Right-Click
-            if (Input.GetMouseButtonDown(1))
-            {
-                animator.SetTrigger("Slash");
-            }
         }
 
 
