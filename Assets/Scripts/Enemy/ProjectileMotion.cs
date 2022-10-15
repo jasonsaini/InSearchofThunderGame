@@ -8,7 +8,7 @@ public class ProjectileMotion : MonoBehaviour
     private Transform player;
     private Vector3 target;
     private PlayerController playerAttributes;
-    private Rigidbody _rb;
+
     // Start is called before the first frame update
     void Start()
     {
