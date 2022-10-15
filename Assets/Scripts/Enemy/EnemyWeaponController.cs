@@ -10,7 +10,7 @@ public class EnemyWeaponController : MonoBehaviour
     void Start()
     {
         playerAttributes = GameObject.Find("Thor").GetComponent<PlayerController>();
-        player = GameObject.Find("Thor").transform;
+
          
     }
 

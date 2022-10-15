@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; 
 
 public class WeaponController : MonoBehaviour
 {
+    public Enemy enemyAttributes;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class WeaponController : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            // deal damage
+            enemyAttributes.Health -= 50;
         }
     }
 }

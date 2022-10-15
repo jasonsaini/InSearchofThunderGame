@@ -50,26 +50,39 @@ public class PlayerController : MonoBehaviour
             GatherInput();
             Look();
             Dash();
-
-            if (canAttack)
-            {
-                // Attack; Left-Click
-                if (Input.GetMouseButtonDown(0))
-                {
-                    animator.SetTrigger("Slash");
-                }
-
-                // Attack; Right-Click
-                if (Input.GetMouseButtonDown(1))
-                {
-                    animator.SetTrigger("Slash");
-                }
-
-            }
+            Attack();    
 
         }
 
 
+    }
+
+    public void Attack()
+    {
+        
+        if (canAttack)
+        {
+            canAttack = false;
+            // Attack; Left-Click
+            if (Input.GetMouseButtonDown(0))
+            {
+                animator.SetTrigger("Slash");
+            }
+
+            // Attack; Right-Click
+            if (Input.GetMouseButtonDown(1))
+            {
+                animator.SetTrigger("Slash");
+            }
+            StartCoroutine(ResetAttackCooldown());
+        }
+        
+    }
+    
+    IEnumerator ResetAttackCooldown()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 
     private void FixedUpdate()
