@@ -74,9 +74,10 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("Slash");
             }
-            StartCoroutine(ResetAttackCooldown());
+            
         }
-        
+        StartCoroutine(ResetAttackCooldown());
+
     }
     
     IEnumerator ResetAttackCooldown()
@@ -91,9 +92,9 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-
             animator.SetTrigger("Dead");
-            dead = true;            
+            dead = true;
+            _rb.velocity = Vector3.zero;
         }
     }
 

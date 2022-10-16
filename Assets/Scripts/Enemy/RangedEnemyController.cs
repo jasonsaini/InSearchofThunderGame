@@ -4,67 +4,66 @@ using UnityEngine;
 
 public class RangedEnemyController : MonoBehaviour
 {
-    public Transform playerLocation;
-    public PlayerController Thor;
-    public UnityEngine.AI.NavMeshAgent enemy;
-    public Vector3 lastEnemyvelocity;
-    public Vector3 distFromPlayer;
-    private Animator animator;
+    [SerializeField] private Animator animator;
+    [SerializeField] public float Health = 100f;
+    [SerializeField] private float Damage = 20f;
+    private bool dead = false;
 
- 
+    public float speed;
+    public float stoppingDistance;
+    public float retreatDistance;
 
+    public float shotInterval;
+    public float startShotInterval;
+
+    public GameObject projectile;
+     public Transform player;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-       // grab player script
-        Thor = (PlayerController)(FindObjectOfType(typeof(PlayerController)));
+    }
+
+    private void FixedUpdate()
+    {
+        if (Health <= 0)
+        {
+
+            animator.SetTrigger("Dead");
+            dead = true;
+           
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Look();
-        Chase();
-        if (enemy.remainingDistance < 5f)
+        transform.LookAt(player);
+        if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
-            BackAway();
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+
         }
-     }
-
-    void FixedUpdate()
-    {
-        
-
-
-    }
-    void Chase()
-    {
-      
-       enemy.SetDestination(playerLocation.position);
-    }
-    void Attack()
-    {
-
-        if (enemy.remainingDistance >= enemy.stoppingDistance)
+        else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
         {
-            // play attack animation
-            animator.SetTrigger("Attack");
-            // deal damage to player
-            //Thor.health -= 1;
+            transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+        else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        Vector3 projectilePos;
+        if (shotInterval <= 0)
+        {
+            projectilePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            transform.LookAt(player);
+            Instantiate(projectile, projectilePos, transform.rotation);
+            shotInterval = startShotInterval;
         }
         else
         {
-           enemy.velocity = lastEnemyvelocity;
+            shotInterval -= Time.deltaTime;
         }
-    }
-    void Look()
-    {
-        this.transform.LookAt(playerLocation);
-    }
-
-    void BackAway()
-    {
-        //this.transform.Translate(-transform.forward * enemy.speed * Time.deltaTime);
     }
 }

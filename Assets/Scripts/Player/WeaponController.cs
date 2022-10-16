@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public Enemy enemyAttributes;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,15 @@ public class WeaponController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("MeleeEnemy"))
         {
-            enemyAttributes.Health -= 50;
+            MeleeEnemyController meleeEnemyAttributes = other.GetComponentInChildren<MeleeEnemyController>();
+            meleeEnemyAttributes.Health -= 30;
+        }
+        else if(other.CompareTag("RangedEnemy"))
+        {
+            RangedEnemyController rangedEnemyAttributes = other.GetComponentInChildren<RangedEnemyController>();
+            rangedEnemyAttributes.Health -= 30;
         }
     }
 }

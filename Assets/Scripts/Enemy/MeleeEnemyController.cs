@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MeleeEnemyController : Enemy
+public class MeleeEnemyController : MonoBehaviour
 {
     public Animator animator;
+    [SerializeField] public float Health = 100f;
+    [SerializeField] private float Damage = 20f;
+    private bool dead = false;
+
     public Transform playerLocation;
     public PlayerController Thor;
     public UnityEngine.AI.NavMeshAgent enemy;
     public Vector3 lastEnemyvelocity;
+
 
    
 
@@ -24,15 +29,25 @@ public class MeleeEnemyController : Enemy
     // Update is called once per frame
     void Update()
     {
-        Look();
-        Chase();
-        Attack();
+        if(!dead)
+        {
+            Look();
+            Chase();
+            Attack();
+        }
+
     }
 
     void FixedUpdate()
     {
+        if (Health <= 0)
+        {
 
-       
+            dead = true;
+            animator.SetTrigger("Dead");
+            
+            
+        }
 
     }
     void Chase()
