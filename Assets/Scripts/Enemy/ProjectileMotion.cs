@@ -8,11 +8,12 @@ public class ProjectileMotion : MonoBehaviour
     private Transform player;
     private Vector3 target;
     private PlayerController playerAttributes;
-
+    private RangedEnemyController enemyAttributes;
     // Start is called before the first frame update
     void Start()
     {
         playerAttributes = GameObject.Find("Thor").GetComponent<PlayerController>();
+        enemyAttributes = GameObject.Find("YogaMaster").GetComponent<RangedEnemyController>();
         player = GameObject.Find("Thor").transform;
         target = new Vector3(player.position.x, player.position.y + 2, player.position.z);
         
@@ -33,7 +34,7 @@ public class ProjectileMotion : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerAttributes.health -= GetComponentInParent<RangedEnemyController>().Damage;
+            playerAttributes.health -= enemyAttributes.Damage;
             DestroyProjectile();
         }
     }
