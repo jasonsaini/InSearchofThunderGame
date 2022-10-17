@@ -6,8 +6,8 @@ using UnityEngine;
 public class MeleeEnemyController : MonoBehaviour
 {
     public Animator animator;
-    [SerializeField] public float Health = 100f;
-    [SerializeField] private float Damage = 20f;
+    [SerializeField] public float health = 100f;
+    [SerializeField] private float hamage = 20f;
     private bool dead = false;
 
     public Transform playerLocation;
@@ -21,9 +21,9 @@ public class MeleeEnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
         // grab player script
         Thor = (PlayerController)(FindObjectOfType(typeof(PlayerController)));
+        dead = false;
     }
 
     // Update is called once per frame
@@ -35,19 +35,21 @@ public class MeleeEnemyController : MonoBehaviour
             Chase();
             Attack();
         }
+        if (health <= 0 )
+        {
+
+            dead = true;
+            animator.SetBool("Attacking", false);
+            animator.SetBool("Moving", false);
+            animator.SetTrigger("Dead");
+
+        }
 
     }
 
     void FixedUpdate()
     {
-        if (Health <= 0)
-        {
 
-            dead = true;
-            animator.SetTrigger("Dead");
-            
-            
-        }
 
     }
     void Chase()

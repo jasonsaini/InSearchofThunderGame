@@ -594,7 +594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &39850536
 Transform:
   m_ObjectHideFlags: 0
@@ -11279,8 +11279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 798020478}
-  Health: 100
-  Damage: 20
+  health: 100.05
+  hamage: 20
   playerLocation: {fileID: 5684539720023634179}
   Thor: {fileID: 5684539720023634180}
   enemy: {fileID: 798020480}
@@ -13054,11 +13054,11 @@ GameObject:
   - component: {fileID: 1061304196}
   m_Layer: 0
   m_Name: FodderRanged
-  m_TagString: Untagged
+  m_TagString: RangedEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1061304196
 Transform:
   m_ObjectHideFlags: 0
@@ -19620,6 +19620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: YogaMaster
       objectReference: {fileID: 0}
+    - target: {fileID: 1233347782355984, guid: e218b66930d51a741a5150ddb1bfeec0, type: 3}
+      propertyPath: m_TagString
+      value: RangedEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4163706531932942, guid: e218b66930d51a741a5150ddb1bfeec0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -19742,18 +19746,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
---- !u!114 &1854220208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854220203}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7b254a0450d32458d97999646cb331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1854220209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26780,17 +26772,17 @@ PrefabInstance:
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000014901161
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802322
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000022351742
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245557329023, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -26855,12 +26847,12 @@ PrefabInstance:
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.37007573
+      value: 0.3700757
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09741973
+      value: -0.09741972
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -26975,6 +26967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440264570961745047, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
+        type: 3}
+      propertyPath: Damage
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4440264570961745047, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
         type: 3}

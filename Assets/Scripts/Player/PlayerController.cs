@@ -51,7 +51,14 @@ public class PlayerController : MonoBehaviour
             Look();
             Dash();
             Attack();    
-
+        }
+        if (health <= 0) { 
+            {
+                _rb.velocity = Vector3.zero;
+                animator.SetTrigger("Dead");
+                
+                
+            }
         }
 
 
@@ -62,10 +69,11 @@ public class PlayerController : MonoBehaviour
         
         if (canAttack)
         {
-            canAttack = false;
+            
             // Attack; Left-Click
             if (Input.GetMouseButtonDown(0))
             {
+               
                 animator.SetTrigger("Slash");
             }
 
@@ -82,20 +90,23 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator ResetAttackCooldown()
     {
+        canAttack = false;
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
 
     private void FixedUpdate()
     {
-        Move();
-
         if (health <= 0)
         {
-            animator.SetTrigger("Dead");
             dead = true;
-            _rb.velocity = Vector3.zero;
         }
+        if (!dead)
+        {
+            Move();
+        }
+
+        
     }
 
     private void GatherInput()

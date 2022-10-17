@@ -22,7 +22,7 @@ public class WeaponController : MonoBehaviour
         if (other.CompareTag("MeleeEnemy"))
         {
             MeleeEnemyController meleeEnemyAttributes = other.GetComponentInChildren<MeleeEnemyController>();
-            meleeEnemyAttributes.Health -= 30;
+            meleeEnemyAttributes.health -= 30;
         }
         else if(other.CompareTag("RangedEnemy"))
         {
