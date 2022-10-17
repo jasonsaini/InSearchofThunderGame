@@ -594,7 +594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &39850536
 Transform:
   m_ObjectHideFlags: 0
@@ -11280,7 +11280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 798020478}
   health: 100.05
-  hamage: 20
+  hamage: 10
   playerLocation: {fileID: 5684539720023634179}
   Thor: {fileID: 5684539720023634180}
   enemy: {fileID: 798020480}
@@ -19760,11 +19760,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   Health: 100
-  Damage: 20
+  Damage: 7
   speed: 6
   stoppingDistance: 6
   retreatDistance: 10
-  shotInterval: 0
+  shotInterval: 5
   startShotInterval: 0.56
   projectile: {fileID: 2087932268799366279, guid: 741328415b25c4c428a226888c8f474b,
     type: 3}
@@ -26842,12 +26842,12 @@ PrefabInstance:
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23519199
+      value: 0.23519197
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3700757
+      value: 0.37007567
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -26976,7 +26976,7 @@ PrefabInstance:
     - target: {fileID: 4440264570961745047, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
         type: 3}
       propertyPath: health
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4440264570961745047, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
         type: 3}

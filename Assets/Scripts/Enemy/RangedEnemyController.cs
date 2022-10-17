@@ -6,7 +6,7 @@ public class RangedEnemyController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] public float Health = 100f;
-    [SerializeField] private float Damage = 20f;
+    [SerializeField] public float Damage = 20f;
     private bool dead = false;
 
     public float speed;

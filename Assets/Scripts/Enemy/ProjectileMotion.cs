@@ -33,7 +33,7 @@ public class ProjectileMotion : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerAttributes.health -= 30;
+            playerAttributes.health -= GetComponentInParent<RangedEnemyController>().Damage;
             DestroyProjectile();
         }
     }
