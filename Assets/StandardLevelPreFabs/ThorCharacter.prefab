@@ -1812,6 +1812,8 @@ MonoBehaviour:
   dashTimeoutMax: 0.8
   health: 100
   Damage: 20
+  attackCooldown: 1
+  canAttack: 1
 --- !u!1 &8223921232902436577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,7 +1950,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
