@@ -3298,7 +3298,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -8255,7 +8255,12 @@ PrefabInstance:
     - target: {fileID: 6804746245023326227, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.777664
+      value: 1.7777778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804746245023326227, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -8280,12 +8285,12 @@ PrefabInstance:
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000014901161
+      value: 0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029802322
+      value: 0.000000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -8330,17 +8335,17 @@ PrefabInstance:
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23519196
+      value: 0.23519197
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.37007567
+      value: 0.3700757
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09741971
+      value: -0.09741972
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -27482,12 +27487,6 @@ Transform:
   m_Father: {fileID: 1640588045}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1116347061 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2312433636474230833, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2312433635426042500}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1128156899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40906,6 +40905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 2312433634843663395, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2312433634843663404, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
         type: 3}
       propertyPath: m_RootOrder
@@ -41099,7 +41103,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 1116347061}
+      objectReference: {fileID: 0}
     - target: {fileID: 7630533118650362110, guid: 23720c50b48c44da5a4961d05877d2b3,
         type: 3}
       propertyPath: m_RootOrder
