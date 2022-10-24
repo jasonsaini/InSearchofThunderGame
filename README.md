@@ -32,12 +32,13 @@
    - [ ] Iterate combat mechanics
         - [ ] Boomerang throw (throw & recall hammer)
         - [ ] Teleport to hammer 
+        - [ ] 3 String Combo
 - [ ] Graphics / VFX : 
   - [ ] Polished Animations
     - [ ] Idle Ranged Enemy Animation
     - [ ] Replace Combat Animations
     - [ ] Tweak Dash Animation
-  - [ ] Particle Effects
+- [ ] Particle Effects
 - [ ] Sound FX, Music
   - [ ] Ambient Music -> Combat -> Back to Ambient
   - [ ] Enemy Sound Effects
