@@ -125,7 +125,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamo_com
+  m_Name: Basic Attack
   m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
@@ -140,7 +140,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 35248eb54fcb9417dae4e5e7afd9bff8,
+  m_Motion: {fileID: -203655887218126122, guid: b72f4d995f6fa4359a8545a734fa79f0,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -477,7 +477,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Base Layer
     m_StateMachine: {fileID: -3168739317623082685}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: dc2c5ec340152415aa33d645a6e0b926, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
