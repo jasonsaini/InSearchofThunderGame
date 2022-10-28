@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CapsuleCollider playerCollider;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject LightningDashFX;
-
+    private GameObject Mjolnir;
     // Movement Attributes
     [SerializeField] private float _runSpeed = 12.5f;
     [SerializeField] private float _dashSpeedMax = 2f;
@@ -22,12 +22,16 @@ public class PlayerController : MonoBehaviour
     // Player Attributes
     [SerializeField] public float health = 100f;
     [SerializeField] private float Damage = 20f;
-    [SerializeField] public float attackCooldown = 1.0f;
+    [SerializeField] public float attackCooldown = 2.5f;
     private bool dead;
     // Temp. Variables
     private Vector3 _input;
     bool moving = false;
+    
+    public bool attacking = true;
     float moveSpeed;
+    GameObject hammer;
+    GameObject hammerToThrow;
 
     private float dashTimer;
     private bool canDash = true;
@@ -37,6 +41,7 @@ public class PlayerController : MonoBehaviour
     public bool canAttack = true;
     private void Start()
     {
+       
         dead = false;
         // Fetch Objects
         animator = GetComponentInChildren<Animator>();
@@ -56,8 +61,6 @@ public class PlayerController : MonoBehaviour
             {
                 _rb.velocity = Vector3.zero;
                 animator.SetTrigger("Dead");
-                
-                
             }
         }
 
@@ -70,29 +73,48 @@ public class PlayerController : MonoBehaviour
         if (canAttack)
         {
             
+            attacking = true;
             // Attack; Left-Click
             if (Input.GetMouseButtonDown(0))
             {
-               
+                _rb.velocity = Vector3.zero;
+                _rb.freezeRotation = true;
                 animator.SetTrigger("Slash");
             }
 
             // Attack; Right-Click
             if (Input.GetMouseButtonDown(1))
             {
-                animator.SetTrigger("Slash");
+                _rb.velocity = Vector3.zero;
+                _rb.freezeRotation = true;
+                animator.SetTrigger("Throw");    
+                //Boomerang
+                
             }
+
             
         }
         StartCoroutine(ResetAttackCooldown());
+        
+    }
+    public void Boomerang()
+    {
+        // hide hammer in hand
+        hammer.GetComponent<MeshRenderer>().enabled = false;
+
+        // instantiate throwable
+        Instantiate(hammerToThrow, hammerToThrow.transform.position, transform.rotation);
 
     }
-    
     IEnumerator ResetAttackCooldown()
     {
+
+        attacking = true;
         canAttack = false;
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+        attacking = false;
+        
     }
 
     private void FixedUpdate()

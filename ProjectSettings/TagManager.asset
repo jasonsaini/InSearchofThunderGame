@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - MeleeEnemy
   - RangedEnemy
+  - Mjolnir
   layers:
   - Default
   - TransparentFX

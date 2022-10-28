@@ -15,12 +15,14 @@ public class MeleeEnemyController : MonoBehaviour
     public UnityEngine.AI.NavMeshAgent enemy;
     public Vector3 lastEnemyvelocity;
 
+    private float initialHealth;
 
    
 
     // Start is called before the first frame update
     void Start()
     {
+        initialHealth = health;
         // grab player script
         Thor = (PlayerController)(FindObjectOfType(typeof(PlayerController)));
         dead = false;
@@ -42,15 +44,15 @@ public class MeleeEnemyController : MonoBehaviour
             animator.SetBool("Attacking", false);
             animator.SetBool("Moving", false);
             animator.SetTrigger("Dead");
-
         }
+
 
     }
 
     void FixedUpdate()
     {
 
-
+   
     }
     void Chase()
     {
@@ -69,8 +71,6 @@ public class MeleeEnemyController : MonoBehaviour
             // play attack animation
             animator.SetBool("Attacking", true);
             animator.SetBool("Moving", false);
-            // deal damage to player
-            //Thor.health -= 1;
         }
         else
         {

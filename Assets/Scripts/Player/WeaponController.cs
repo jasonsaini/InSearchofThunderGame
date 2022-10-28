@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    
+    public PlayerController Thor;
+    public MeshRenderer enemyMesh;
+    public float flashTime = 2f;
+    Color origColor;
     // Start is called before the first frame update
     void Start()
     {
         
+        Thor = GameObject.Find("Thor").GetComponent<PlayerController>();
+        enemyMesh = GameObject.Find("SkellyBoi").GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -19,15 +24,20 @@ public class WeaponController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MeleeEnemy"))
+        if (Thor.attacking)
         {
-            MeleeEnemyController meleeEnemyAttributes = other.GetComponentInChildren<MeleeEnemyController>();
-            meleeEnemyAttributes.health -= 30;
-        }
-        else if(other.CompareTag("RangedEnemy"))
-        {
-            RangedEnemyController rangedEnemyAttributes = other.GetComponentInChildren<RangedEnemyController>();
-            rangedEnemyAttributes.Health -= 30;
+
+
+            if (other.CompareTag("MeleeEnemy"))
+            {
+               
+            }
+            else if (other.CompareTag("RangedEnemy"))
+            {
+                              
+            }
         }
     }
+
+
 }

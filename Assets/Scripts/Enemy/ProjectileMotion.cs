@@ -23,10 +23,10 @@ public class ProjectileMotion : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        if(transform.position == target)
-        {
-            DestroyProjectile();
-        }
+       if(transform.position == target)
+       {
+          DestroyProjectile();
+       }
 
     }
 
@@ -36,7 +36,9 @@ public class ProjectileMotion : MonoBehaviour
         {
             playerAttributes.health -= enemyAttributes.Damage;
             DestroyProjectile();
+
         }
+        
     }
     void DestroyProjectile()
     {
