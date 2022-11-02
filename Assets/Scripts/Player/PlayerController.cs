@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
     private void Dash()
     {
         if (Input.GetKeyDown(KeyCode.Space) && _input != Vector3.zero && canDash == true) {
-            _rb.freezeRotation = true;
+            //_rb.freezeRotation = true;
             canDash = false;
             dashTimer = dashTimerMax;
             dashTimeout = dashTimeoutMax;

@@ -202,13 +202,38 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 10}
   - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1440
+    height: 797
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 46
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -898,7 +923,7 @@ MonoBehaviour:
     m_FarClip: 9999.57
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.7647432, y: -0.039885536, z: 0.041956417, w: 0.6417638}
+  m_LastSceneViewRotation: {x: 0.18226825, y: 0.079553224, z: -0.01479891, w: 0.9799287}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -939,6 +964,7 @@ MonoBehaviour:
     - {fileID: -1140995728871221285, guid: 68e7d9460f0d2425e8a22d2da54a59b8, type: 2}
     - {fileID: -5483910454724060505, guid: 195511c01d5de8a4c8f7496251293a8a, type: 2}
     - {fileID: -3168739317623082685, guid: 8baef4fc1b908431ba294d683a338f45, type: 2}
+    - {fileID: 649571064775490798, guid: 8baef4fc1b908431ba294d683a338f45, type: 2}
     m_ValueSerializationHelper:
     - e00: 1.2288253
       e01: 0
@@ -992,7 +1018,7 @@ MonoBehaviour:
   m_AnimatorController: {fileID: 9100000, guid: 8baef4fc1b908431ba294d683a338f45,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -3168739317623082685, guid: 8baef4fc1b908431ba294d683a338f45,
+  - m_Target: {fileID: 649571064775490798, guid: 8baef4fc1b908431ba294d683a338f45,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -1003,7 +1029,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 1
+  m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &21
@@ -1015,14 +1041,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
