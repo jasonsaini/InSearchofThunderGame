@@ -1353,7 +1353,7 @@ GameObject:
   - component: {fileID: 2001786679974477432}
   - component: {fileID: 2001786679964881304}
   m_Layer: 0
-  m_Name: "Psar\xE1s"
+  m_Name: "Psara\u0301s"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

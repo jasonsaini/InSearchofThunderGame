@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 1047774885112801736}
   - component: {fileID: 1047774885103765078}
   m_Layer: 0
-  m_Name: "K\xE1mpia"
+  m_Name: "Ka\u0301mpia"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
