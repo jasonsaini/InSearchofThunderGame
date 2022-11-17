@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public const float MAX_HEALTH = 100f;
     // Object Declarations
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private CapsuleCollider playerCollider;
@@ -20,9 +21,10 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private float _turnSpeed = 360f;
 
     // Player Attributes
-    [SerializeField] public float health = 100f;
+    [SerializeField] public float health = MAX_HEALTH;
     [SerializeField] private float Damage = 20f;
     [SerializeField] public float attackCooldown = 1.0f;
+    [SerializeField] private Healthbar healthbar;
     private bool dead;
     // Temp. Variables
     private Vector3 _input;
@@ -40,8 +42,8 @@ public class PlayerController : MonoBehaviour
         dead = false;
         // Fetch Objects
         animator = GetComponentInChildren<Animator>();
+        healthbar = this.GetComponent<Healthbar>();
     }
-
 
     private void Update()
     {
@@ -60,7 +62,7 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
-
+        healthbar.updateHealthBar(MAX_HEALTH, health);
 
     }
 
