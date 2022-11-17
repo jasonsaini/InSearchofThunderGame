@@ -169,6 +169,19 @@ public class PlayerController : MonoBehaviour
     {
         _rb.MovePosition(transform.position + transform.forward * _input.normalized.magnitude * _runSpeed * _dashSpeed * Time.deltaTime);   
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyProjectile"))
+        {
+            health -= 20;
+        }
+        else if (other.CompareTag("EnemyMelee"))
+        {
+            health -= 10;
+        }
+    }
+
 }
 
 

@@ -44,11 +44,11 @@ public class RangedEnemyController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
         }
-        else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
+        else if (Vector3.Distance(transform.position, player.position) <= stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
-        else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
+        else if (Vector3.Distance(transform.position, player.position) <= retreatDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }

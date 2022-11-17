@@ -16,7 +16,7 @@ public class MeleeEnemyController : MonoBehaviour
     public Vector3 lastEnemyvelocity;
 
 
-   
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +29,13 @@ public class MeleeEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!dead)
+        if (!dead)
         {
             Look();
             Chase();
             Attack();
         }
-        if (health <= 0 )
+        if (health <= 0)
         {
 
             dead = true;
@@ -60,7 +60,7 @@ public class MeleeEnemyController : MonoBehaviour
     }
     void Attack()
     {
-        
+
         if (enemy.remainingDistance < enemy.stoppingDistance)
         {
             // stop running attacking
@@ -82,4 +82,6 @@ public class MeleeEnemyController : MonoBehaviour
     {
         this.transform.LookAt(playerLocation);
     }
+
+
 }
