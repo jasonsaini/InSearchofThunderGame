@@ -218,7 +218,7 @@ RectTransform:
   - {fileID: 939545257}
   - {fileID: 983600296}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -315,6 +315,12 @@ RectTransform:
   m_AnchoredPosition: {x: 75.0022, y: -1611.9996}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &144388130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 569158534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &189451998
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -382,17 +388,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 939545257}
     m_Modifications:
     - target: {fileID: 6847524014264671142, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: m_Name
       value: SnowParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671142, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: lengthInSec
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
@@ -406,8 +422,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
       propertyPath: VelocityModule.y.minScalar
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: VelocityModule.z.minScalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
@@ -432,7 +458,12 @@ PrefabInstance:
     - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671144, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
@@ -442,22 +473,37 @@ PrefabInstance:
     - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4727097
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.8
+      value: 2343
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 98.1
+      value: -76
       objectReference: {fileID: 0}
     - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
         type: 3}
@@ -493,6 +539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847524014264671147, guid: 84a8bb611268f4dd5a149de2cbfb3d5e,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84a8bb611268f4dd5a149de2cbfb3d5e, type: 3}
@@ -531,6 +582,7 @@ RectTransform:
   - {fileID: 74244525}
   - {fileID: 1387020781}
   - {fileID: 1574742009}
+  - {fileID: 144388130}
   m_Father: {fileID: 61827772}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -710,7 +762,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1145330324
 MonoBehaviour:
@@ -1051,7 +1103,7 @@ PrefabInstance:
     - target: {fileID: 2312433634843663404, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2312433634843663404, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
         type: 3}
@@ -1192,7 +1244,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527545125
 GameObject:
