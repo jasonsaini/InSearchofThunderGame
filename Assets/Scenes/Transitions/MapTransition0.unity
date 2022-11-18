@@ -508,6 +508,7 @@ GameObject:
   - component: {fileID: 939545259}
   - component: {fileID: 939545258}
   - component: {fileID: 939545260}
+  - component: {fileID: 939545261}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -596,6 +597,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &939545261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939545256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693c3cfa0c883458fa94a0a76141f522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 1511997249}
+  transitionTime: 1
 --- !u!4 &983600296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1443212154936991457, guid: 6a0e36bfa567ae74885ceb6d4d749305,
@@ -1031,7 +1046,7 @@ PrefabInstance:
     - target: {fileID: 2312433634843663395, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2312433634843663404, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
         type: 3}
@@ -1105,6 +1120,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b2d65579b3fb4b25bfb0523569f8fd5, type: 3}
+--- !u!95 &1511997249 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2312433636243516641, guid: 6b2d65579b3fb4b25bfb0523569f8fd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511997248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518948998
 GameObject:
   m_ObjectHideFlags: 0
