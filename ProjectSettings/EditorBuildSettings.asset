@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BigArena1.unity
     guid: d71bf58b78e844e4c8a051eea11d9e4d
   - enabled: 1
-    path: Assets/Scenes/Arena2.unity
+    path: Assets/Scenes/RealScenes/Arena2.unity
     guid: ec9c7c83a8b5faa40aaff0b553c9a26a
   - enabled: 1
     path: Assets/Scenes/RealScenes/TitleScreen.unity
