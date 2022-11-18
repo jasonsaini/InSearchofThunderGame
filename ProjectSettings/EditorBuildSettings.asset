@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BeachSide.unity
+    path: Assets/Scenes/RealScenes/BeachSide.unity
     guid: 50c6419c6d06e4b82a8c8ac0ea95c3b8
   - enabled: 1
     path: Assets/Scenes/BigArena1.unity
