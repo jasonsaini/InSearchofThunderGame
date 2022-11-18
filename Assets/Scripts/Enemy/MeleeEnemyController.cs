@@ -6,6 +6,7 @@ using UnityEngine;
 public class MeleeEnemyController : MonoBehaviour
 {
     public Animator animator;
+    public const float MAX_HEALTH = 100f;
     [SerializeField] public float health = 100f;
     [SerializeField] private float hamage = 20f;
     private bool dead = false;
@@ -15,7 +16,7 @@ public class MeleeEnemyController : MonoBehaviour
     public UnityEngine.AI.NavMeshAgent enemy;
     public Vector3 lastEnemyvelocity;
 
-
+    [SerializeField] private Healthbar healthbar;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class MeleeEnemyController : MonoBehaviour
             Look();
             Chase();
             Attack();
+            healthbar.updateHealthBar(MAX_HEALTH, health);
         }
         if (health <= 0)
         {
@@ -44,7 +46,7 @@ public class MeleeEnemyController : MonoBehaviour
             animator.SetTrigger("Dead");
 
         }
-
+        
     }
 
     void FixedUpdate()
