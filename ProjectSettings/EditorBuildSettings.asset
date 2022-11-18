@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Arena2.unity
     guid: ec9c7c83a8b5faa40aaff0b553c9a26a
   - enabled: 1
-    path: Assets/Scenes/LoadingScreen.unity
+    path: Assets/Scenes/RealScenes/TitleScreen.unity
     guid: d9e8b748becd14f16829c27d06f03982
   m_configObjects: {}
