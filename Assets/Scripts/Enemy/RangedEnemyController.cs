@@ -8,7 +8,7 @@ public class RangedEnemyController : MonoBehaviour
     [SerializeField] public float Health = 100f;
     [SerializeField] public float Damage = 20f;
     private bool dead = false;
-
+    private bool stopped = false;
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -33,24 +33,27 @@ public class RangedEnemyController : MonoBehaviour
             dead = true;
            
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         transform.LookAt(player);
-        if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
+        if (!stopped)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
-        }
-        else if (Vector3.Distance(transform.position, player.position) <= stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-        }
-        else if (Vector3.Distance(transform.position, player.position) <= retreatDistance)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            }
+            else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            }
+            else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+
+            }
+            else
+            {
+                stopped = true;
+            }
         }
 
         Vector3 projectilePos;
@@ -65,5 +68,14 @@ public class RangedEnemyController : MonoBehaviour
         {
             shotInterval -= Time.deltaTime;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+
+
+
     }
 }

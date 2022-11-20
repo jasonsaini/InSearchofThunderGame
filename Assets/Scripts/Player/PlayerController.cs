@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _dashSpeedMax = 2f;
     [SerializeField] private float dashTimerMax = .2f;
     [SerializeField] private float dashTimeoutMax = .8f;
-    //[SerializeField] private float _turnSpeed = 360f;
 
     // Player Attributes
     [SerializeField] public float health = MAX_HEALTH;
@@ -36,13 +35,28 @@ public class PlayerController : MonoBehaviour
     private float _dashSpeed = 1f;
     private float dashTimeout;
 
+
     public bool canAttack = true;
+    
+    // mjolnir variables
+    public GameObject mjolnir;
+    public Rigidbody mjolnirRb;
+    public float throwPower;
+    HammerController hammerLogic;
+    private GameObject thorHand;
+    public float catchDistance = 1f;
+
+
     private void Start()
     {
         dead = false;
         // Fetch Objects
         animator = GetComponentInChildren<Animator>();
         healthbar = this.GetComponent<Healthbar>();
+        mjolnir =  GameObject.Find("Mjolnir");
+        thorHand = GameObject.Find("Hand_R");
+        mjolnirRb = mjolnir.GetComponent<Rigidbody>();
+        hammerLogic = mjolnir.GetComponent<HammerController>();
     }
 
     private void Update()
@@ -58,8 +72,6 @@ public class PlayerController : MonoBehaviour
             {
                 _rb.velocity = Vector3.zero;
                 animator.SetTrigger("Dead");
-                
-                
             }
         }
         healthbar.updateHealthBar(MAX_HEALTH, health);
@@ -82,8 +94,16 @@ public class PlayerController : MonoBehaviour
             // Attack; Right-Click
             if (Input.GetMouseButtonDown(1))
             {
-                animator.SetTrigger("Slash");
+                HammerThrow();
+                hammerLogic.away = true;
             }
+            
+            /* Return right click
+            if (hammerLogic.away && Input.GetMouseButtonDown(1))
+            {
+                //HammerReturn();
+            }
+            */
             
         }
         StartCoroutine(ResetAttackCooldown());
@@ -147,6 +167,14 @@ public class PlayerController : MonoBehaviour
                 canDash = true;
             }
         }
+    }
+
+    private void HammerThrow()
+    {
+        mjolnirRb.transform.parent = null;
+        mjolnirRb.isKinematic = false;
+        mjolnirRb.AddForce((transform.forward * throwPower) + Vector3.up, ForceMode.Impulse);
+        //mjolnir.transform.rotation = Quaternion.Euler(0f, 90f, mjolnir.transform.eulerAngles.z);
     }
 
     private void Look()

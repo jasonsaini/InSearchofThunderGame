@@ -7087,6 +7087,9 @@ MonoBehaviour:
   attackCooldown: 1
   healthbar: {fileID: 0}
   canAttack: 1
+  mjolnir: {fileID: 0}
+  mjolnirRb: {fileID: 0}
+  throwPower: 0
 --- !u!65 &331215105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7671,7 +7674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -3.600006, y: -5.299988}
+  m_AnchoredPosition: {x: -3.5999756, y: -5.299988}
   m_SizeDelta: {x: 876, y: 424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395916212
@@ -11975,7 +11978,7 @@ PrefabInstance:
     - target: {fileID: 6413988200788709273, guid: 35ca49644d181b94e8308efd5246463d,
         type: 3}
       propertyPath: m_Name
-      value: Healthbar
+      value: Healthbar [DEPRECATED]
       objectReference: {fileID: 0}
     - target: {fileID: 8248248018345842348, guid: 35ca49644d181b94e8308efd5246463d,
         type: 3}
@@ -13180,37 +13183,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 976743977}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1010655197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1010655198}
-  m_Layer: 7
-  m_Name: HammerInstance
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1010655198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010655197}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5684539720023634179}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1013200073
 GameObject:
   m_ObjectHideFlags: 0
@@ -20362,9 +20334,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &1854220205
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20419,7 +20391,7 @@ NavMeshAgent:
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
-  m_AutoRepath: 1
+  m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
@@ -26896,6 +26868,9 @@ MonoBehaviour:
   attackCooldown: 1
   healthbar: {fileID: 0}
   canAttack: 1
+  mjolnir: {fileID: 0}
+  mjolnirRb: {fileID: 0}
+  throwPower: 0
 --- !u!54 &2101045722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27713,10 +27688,20 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 5684539720023634183}
+    - target: {fileID: 4440264570961745047, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
+        type: 3}
+      propertyPath: throwPower
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4440264570961745064, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223921233278107521, guid: 7a1b7480daf4f4bceb4e2d2ae902da86,
+        type: 3}
+      propertyPath: m_Name
+      value: Mjolnir
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a1b7480daf4f4bceb4e2d2ae902da86, type: 3}
