@@ -7,7 +7,9 @@ public class BigBad : MonoBehaviour
     public Animator animator;
     private GameObject Thor;
     private Vector3 playerLocation;
+    GameObject bigBad;
     public UnityEngine.AI.NavMeshAgent enemy;
+    public bool trapped = false, execution = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +20,36 @@ public class BigBad : MonoBehaviour
     void Update()
     {
         Chase();
+        if (trapped)
+        {
+            enemy.isStopped = true;
+            animator.SetBool("Moving", false);
+        }
+        if(execution)
+        {
+            enemy.isStopped = true;
+            animator.SetBool("Moving", false);
+            animator.SetTrigger("Deathcast");
+        }    
     }
     void Chase()
     {
-        animator.SetBool("Moving", true);
-        enemy.SetDestination(Thor.transform.position);
+        if(!trapped)
+        {
+            enemy.isStopped = false;
+            animator.SetBool("Moving", true);
+            enemy.SetDestination(Thor.transform.position);
+        }
+
+   
     }
+
+
+
+    private void SetTrap()
+    {
+        trapped = true;
+    }
+
+
 }

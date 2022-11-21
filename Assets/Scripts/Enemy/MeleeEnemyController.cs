@@ -88,7 +88,7 @@ public class MeleeEnemyController : MonoBehaviour
 
     void onTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "PlayerWeapon")
+        if(other.gameObject.tag == "Mjolnir")
         {
             health -= 25;
         }

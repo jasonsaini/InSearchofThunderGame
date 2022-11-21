@@ -12,6 +12,8 @@ TagManager:
   - EnemyProjectile
   - EnemyMelee
   - Mjolnir
+  - Trap
+  - BigBad
   layers:
   - Default
   - TransparentFX

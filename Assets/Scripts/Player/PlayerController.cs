@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CapsuleCollider playerCollider;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject LightningDashFX;
+    public GameObject lightningTrap;
+    BigBad bigBad;
 
     // Movement Attributes
     [SerializeField] private float _runSpeed = 12.5f;
@@ -35,9 +37,9 @@ public class PlayerController : MonoBehaviour
     private bool canDash = true;
     private float _dashSpeed = 1f;
     private float dashTimeout;
+    
 
-
-    public bool canAttack = true;
+    public bool canAttack = true, bigBadKill = false;
     
     // mjolnir variables
     public GameObject mjolnir;
@@ -52,10 +54,15 @@ public class PlayerController : MonoBehaviour
         healthbar = this.GetComponent<Healthbar>();
         mjolnir =  GameObject.Find("Mjolnir");
         hammerController = mjolnir.GetComponent<HammerController>();
+        bigBad = GameObject.Find("BigBad").GetComponent<BigBad>();
     }
 
     private void Update()
     {
+        if (bigBadKill)
+        {
+            Execution();
+        }
         if (!dead)
         {
             GatherInput();
@@ -85,6 +92,10 @@ public class PlayerController : MonoBehaviour
                 attacking = true;
                 animator.SetTrigger("Slash");
             }
+            if (Input.GetMouseButton(2) &&  hammerController.hammerState == HammerController.HammerState.Static)
+            {
+                animator.SetTrigger("Special");
+            }
 
         }
         StartCoroutine(ResetAttackCooldown());
@@ -100,6 +111,7 @@ public class PlayerController : MonoBehaviour
         canAttack = true;
         
     }
+    
 
     private void FixedUpdate()
     {
@@ -129,8 +141,10 @@ public class PlayerController : MonoBehaviour
             dashTimeout = dashTimeoutMax;
             _dashSpeed = _dashSpeedMax;
             LightningDashFX.SetActive(true);
-            animator.SetTrigger("Dash");
             
+            animator.SetTrigger("Dash");
+            // instantiate lightning trap
+            SetTrap();
         }
 
         if (canDash == false) {
@@ -190,6 +204,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void SetTrap()
+    {
+        Vector3 trapPos = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
+        Instantiate(lightningTrap, trapPos, transform.rotation);
+        lightningTrap.SetActive(true);
+    }
+
+    private void Execution()
+    {
+        animator.SetTrigger("Strangled");
+        transform.Translate(transform.position.x, transform.position.y + 2, transform.position.z);
+        health = 0;
+    }
 }
 
 

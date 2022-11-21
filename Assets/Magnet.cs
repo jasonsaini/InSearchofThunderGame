@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Magnet : MonoBehaviour
 {
-
+    public GameObject bigBad;
     public GameObject Thor;
     public float pullSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {
         Thor = GameObject.Find("Thor");
+        bigBad = GameObject.Find("BigBad");
     }
 
     // Update is called once per frame
@@ -23,9 +24,12 @@ public class Magnet : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("Thor in magnet!");
-            //other.transform.Translate(Time.deltaTime * pullSpeed * (this.transform.position - Thor.transform.position).normalized);
-            Vector3.Lerp(this.transform.position, other.transform.position, .8);
+
+            /*
+            bigBad.GetComponent<BigBad>().execution = true;
+            Thor.GetComponent<PlayerController>().bigBadKill = true;
+            */
+            Thor.GetComponent<PlayerController>().health = 0;
         }
     }
 
