@@ -46,6 +46,10 @@ public class HammerController : MonoBehaviour
             rb.velocity = Vector3.zero;
             
         }
+        if (transform.parent == thorHand.transform)
+        {
+            hammerState = HammerState.Static;
+        }
     }
 
     void FixedUpdate()
@@ -54,15 +58,14 @@ public class HammerController : MonoBehaviour
         {
             hammerState = HammerState.Thrown;
         }
+        /*
         if(Input.GetMouseButton(1) && hammerState != HammerState.Static)
         {
             // play alternate attack animation
-        }    
+        } 
+        */
         if (Input.GetMouseButton(2))
         {
-            startPos = transform.position;
-            endPos = recallPlaceholder.transform.position;
-
             hammerState = HammerState.Returning;
         }
         if(hammerState == HammerState.Thrown)
@@ -72,6 +75,7 @@ public class HammerController : MonoBehaviour
         if (hammerState == HammerState.Returning)
         {
             HammerReturn2();
+           
         }
     }
 
@@ -96,21 +100,23 @@ public class HammerController : MonoBehaviour
     }
     void HammerReturn2()
     {
-        transform.position = Vector3.MoveTowards(transform.position, recallPlaceholder.transform.position, flightSpeed * Time.deltaTime);
-        Debug.Log("Distance: " + Vector3.Distance(startPos, endPos));
-        if (Vector3.Distance(startPos, endPos) <= catchDistance)
-        {
+
+       
             RecalledHammer();
-        }
-        
+            hammerState = HammerState.Static;
+            Debug.Log("Hammer state is set to static!");
+
     }
     void RecalledHammer()
     {
-        Destroy(rb);
-        hammerState = HammerState.Static;
+        
         transform.position = recallPlaceholder.transform.position;
         transform.rotation = recallPlaceholder.transform.rotation;
+        transform.SetParent(thorHand.transform);
         transform.parent = thorHand.transform;
+        Destroy(rb);
+        hammerState = HammerState.Static;
+
     }
 
     
