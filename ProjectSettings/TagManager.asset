@@ -11,6 +11,7 @@ TagManager:
   - RangedEnemy
   - EnemyProjectile
   - EnemyMelee
+  - Mjolnir
   layers:
   - Default
   - TransparentFX

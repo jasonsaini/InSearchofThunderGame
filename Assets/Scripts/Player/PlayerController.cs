@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float Damage = 20f;
     [SerializeField] public float attackCooldown = 1.0f;
     [SerializeField] private Healthbar healthbar;
+    public bool attacking;
     private bool dead;
     // Temp. Variables
     private Vector3 _input;
@@ -40,11 +41,7 @@ public class PlayerController : MonoBehaviour
     
     // mjolnir variables
     public GameObject mjolnir;
-    public Rigidbody mjolnirRb;
-    public float throwPower;
-    HammerController hammerLogic;
-    private GameObject thorHand;
-    public float catchDistance = 1f;
+    public HammerController hammerController;
 
 
     private void Start()
@@ -54,9 +51,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         healthbar = this.GetComponent<Healthbar>();
         mjolnir =  GameObject.Find("Mjolnir");
-        thorHand = GameObject.Find("Hand_R");
-        mjolnirRb = mjolnir.GetComponent<Rigidbody>();
-        hammerLogic = mjolnir.GetComponent<HammerController>();
+        hammerController = mjolnir.GetComponent<HammerController>();
     }
 
     private void Update()
@@ -87,24 +82,10 @@ public class PlayerController : MonoBehaviour
             // Attack; Left-Click
             if (Input.GetMouseButtonDown(0))
             {
-               
+                attacking = true;
                 animator.SetTrigger("Slash");
             }
 
-            // Attack; Right-Click
-            if (Input.GetMouseButtonDown(1))
-            {
-                HammerThrow();
-                hammerLogic.away = true;
-            }
-            
-            /* Return right click
-            if (hammerLogic.away && Input.GetMouseButtonDown(1))
-            {
-                //HammerReturn();
-            }
-            */
-            
         }
         StartCoroutine(ResetAttackCooldown());
 
@@ -112,9 +93,12 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator ResetAttackCooldown()
     {
+       
         canAttack = false;
+        attacking = false; 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+        
     }
 
     private void FixedUpdate()
@@ -169,13 +153,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void HammerThrow()
-    {
-        mjolnirRb.transform.parent = null;
-        mjolnirRb.isKinematic = false;
-        mjolnirRb.AddForce((transform.forward * throwPower) + Vector3.up, ForceMode.Impulse);
-        //mjolnir.transform.rotation = Quaternion.Euler(0f, 90f, mjolnir.transform.eulerAngles.z);
-    }
+
 
     private void Look()
     {

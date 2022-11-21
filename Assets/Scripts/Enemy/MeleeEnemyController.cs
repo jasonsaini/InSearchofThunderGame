@@ -8,9 +8,10 @@ public class MeleeEnemyController : MonoBehaviour
     public Animator animator;
     public const float MAX_HEALTH = 100f;
     [SerializeField] public float health = 100f;
-    [SerializeField] private float hamage = 20f;
+    [SerializeField] private float damage = 20f;
     private bool dead = false;
 
+    public Healthbar hb; 
     public Transform playerLocation;
     public PlayerController Thor;
     public UnityEngine.AI.NavMeshAgent enemy;
@@ -23,7 +24,7 @@ public class MeleeEnemyController : MonoBehaviour
     void Start()
     {
         // grab player script
-        Thor = (PlayerController)(FindObjectOfType(typeof(PlayerController)));
+        Thor = GameObject.Find("Thor").GetComponent<PlayerController>();
         dead = false;
     }
 
@@ -46,6 +47,7 @@ public class MeleeEnemyController : MonoBehaviour
             animator.SetTrigger("Dead");
 
         }
+        hb.updateHealthBar(health, MAX_HEALTH);
         
     }
 
@@ -71,8 +73,7 @@ public class MeleeEnemyController : MonoBehaviour
             // play attack animation
             animator.SetBool("Attacking", true);
             animator.SetBool("Moving", false);
-            // deal damage to player
-            //Thor.health -= 1;
+          
         }
         else
         {
@@ -85,5 +86,12 @@ public class MeleeEnemyController : MonoBehaviour
         this.transform.LookAt(playerLocation);
     }
 
+    void onTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "PlayerWeapon")
+        {
+            health -= 25;
+        }
+    }
 
 }

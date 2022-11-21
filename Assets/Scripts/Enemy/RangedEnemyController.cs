@@ -6,22 +6,30 @@ public class RangedEnemyController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] public float Health = 100f;
+    public float MAX_HEALTH = 100f;
+    
     [SerializeField] public float Damage = 20f;
     private bool dead = false;
     private bool stopped = false;
     public float speed;
+
     public float stoppingDistance;
     public float retreatDistance;
 
+    public Healthbar hb;
+    
     public float shotInterval;
     public float startShotInterval;
-
+    public PlayerController Thor;
     public GameObject projectile;
-     public Transform player;
+    public Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         animator = GetComponentInChildren<Animator>();
+        Thor = GameObject.Find("Thor").GetComponent<PlayerController>();
     }
 
     private void FixedUpdate()
@@ -73,9 +81,19 @@ public class RangedEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        hb.updateHealthBar(MAX_HEALTH, Health);
+    
+    }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Hammer")
+        {
+            if(Thor.attacking)
+            {
+                Health -= 15;
+            }    
+        }
     }
 }
