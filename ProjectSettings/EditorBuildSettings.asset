@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/RealScenes/TitleScreen.unity
     guid: d9e8b748becd14f16829c27d06f03982
   - enabled: 1
-    path: Assets/Scenes/Transitions/MapTransition0.unity
+    path: Assets/Scenes/Transitions/MapTransition1.unity
     guid: cde21d37b4bfc4eaaa45661770ad7fa5
   - enabled: 1
     path: Assets/Scenes/RealScenes/BeachSide.unity
