@@ -11,19 +11,22 @@ public class WASD : MonoBehaviour
     public Image A;
     public Image S;
     public Image D;
+    public Image Space;
     public Sprite wPressed;
     public Sprite aPressed;
     public Sprite sPressed;
     public Sprite dPressed;
+    public Sprite SpacePressed;
     public Sprite wUp;
     public Sprite aUp;
     public Sprite sUp;
     public Sprite dUp;
-    private uint w = 0;
-    private uint a = 0;
-    private uint s = 0;
-    private uint d = 0;
-    private Color tempColor;
+    public Sprite SpaceUp;
+    //private uint w = 0;
+    //private uint a = 0;
+    //private uint s = 0;
+    //private uint d = 0;
+    //private Color tempColor;
 
     // Update is called once per frame
     void Update()
@@ -88,9 +91,15 @@ public class WASD : MonoBehaviour
         else
             D.sprite = dUp;
 
-        //if (w + a + s + d >= 200){
-        //    parent.SetActive(false);
-        //    next.SetActive(true);
-        //}
-    }
+        if (Input.GetKey(KeyCode.Space))
+            Space.sprite = SpacePressed;
+        else {
+            Space.sprite = SpaceUp;
+        }
+
+            //if (w + a + s + d >= 200){
+            //    parent.SetActive(false);
+            //    next.SetActive(true);
+            //}
+        }
 }
