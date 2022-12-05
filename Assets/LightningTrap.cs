@@ -17,10 +17,12 @@ public class LightningTrap : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(audioData.time > 2f)
         {
             audioData.Stop();
         }
+        */
     }
 
     void onCollisionEnter(Collider other)
