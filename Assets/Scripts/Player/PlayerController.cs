@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private bool dead;
     // Temp. Variables
     private Vector3 _input;
-    bool moving = false;
+    public bool moving = false;
     float moveSpeed;
 
     private float dashTimer;
@@ -59,6 +59,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
+        
+        moving = (_input == Vector3.zero);
+        
         if (bigBadKill)
         {
             Execution();
@@ -77,7 +81,16 @@ public class PlayerController : MonoBehaviour
             }
         }
         healthbar.updateHealthBar(MAX_HEALTH, health);
-
+        if (animator.GetBool("Slash") == true)
+        {
+            GetComponent<BoxCollider>().enabled = true;
+            Debug.Log("Melee weapon enabled!");
+        }
+        else
+        {
+            GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("Melee weapon disabled!");
+        }
     }
 
     public void Attack()
@@ -106,8 +119,8 @@ public class PlayerController : MonoBehaviour
     {
        
         canAttack = false;
-        attacking = false; 
         yield return new WaitForSeconds(attackCooldown);
+        attacking = false;
         canAttack = true;
         
     }

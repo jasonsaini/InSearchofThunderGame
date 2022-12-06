@@ -8,7 +8,7 @@ public class HammerController : MonoBehaviour
     private GameObject thorHand;
     private GameObject throwPlaceholder;
     private GameObject recallPlaceholder;
-
+    private Animator animator;
     private Rigidbody rb;
 
     public float flightSpeed = 10f;
@@ -30,6 +30,7 @@ public class HammerController : MonoBehaviour
     void Start()
     {
         Thor = GameObject.Find("Thor");
+        animator = Thor.GetComponent<Animator>();
         thorHand = GameObject.Find("Thor_Hand_R");
         recallPlaceholder = GameObject.Find("RecallPlaceHolder");
         throwPlaceholder = GameObject.Find("ThrowPlaceHolder");
@@ -50,6 +51,16 @@ public class HammerController : MonoBehaviour
         {
             hammerState = HammerState.Static;
         }
+        if (animator.GetBool("Slash") == true)
+        {
+            GetComponent<BoxCollider>().enabled = true;
+            Debug.Log("Mjolnir enabled!");
+        }
+        else
+        {
+            GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("Mjolnir disabled!");
+        }
     }
 
     void FixedUpdate()
@@ -58,12 +69,7 @@ public class HammerController : MonoBehaviour
         {
             hammerState = HammerState.Thrown;
         }
-        /*
-        if(Input.GetMouseButton(1) && hammerState != HammerState.Static)
-        {
-            // play alternate attack animation
-        } 
-        */
+
         if (Input.GetMouseButton(2))
         {
             hammerState = HammerState.Returning;
@@ -88,6 +94,7 @@ public class HammerController : MonoBehaviour
         rb.isKinematic = false;
         rb.useGravity = false;
         transform.rotation = throwPlaceholder.transform.rotation;
+        // add hammer throw sound effect
         rb.AddForce(((Thor.transform.forward) * throwPower), ForceMode.Impulse);
     }
     
@@ -97,6 +104,7 @@ public class HammerController : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, recallPlaceholder.transform.position, flightSpeed);
         RecalledHammer();
         hammerState = HammerState.Static;
+        // TODO: play hammer return sound effect
     }
     void HammerReturn2()
     {
@@ -119,5 +127,14 @@ public class HammerController : MonoBehaviour
 
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "MeleeEnemy")
+        {
+                other.gameObject.GetComponent<Animator>().SetTrigger("HitReacting");
+            other.gameObject.GetComponent<MeleeEnemyController>().health -= 30;
+        }
+    }
+
+
 }

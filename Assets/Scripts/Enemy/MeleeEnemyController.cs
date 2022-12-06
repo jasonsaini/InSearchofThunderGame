@@ -91,6 +91,7 @@ public class MeleeEnemyController : MonoBehaviour
         if(other.gameObject.tag == "Mjolnir")
         {
             health -= 25;
+            animator.SetTrigger("HitReacting");
         }
     }
 
