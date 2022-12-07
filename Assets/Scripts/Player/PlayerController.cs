@@ -81,15 +81,9 @@ public class PlayerController : MonoBehaviour
             }
         }
         healthbar.updateHealthBar(MAX_HEALTH, health);
-        if (animator.GetBool("Slash") == true)
+        if (dead)
         {
-            GetComponent<BoxCollider>().enabled = true;
-            Debug.Log("Melee weapon enabled!");
-        }
-        else
-        {
-            GetComponent<BoxCollider>().enabled = false;
-            Debug.Log("Melee weapon disabled!");
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 

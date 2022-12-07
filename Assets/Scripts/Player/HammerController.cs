@@ -25,6 +25,7 @@ public class HammerController : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
 
+    AudioSource audioData;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class HammerController : MonoBehaviour
         recallPlaceholder = GameObject.Find("RecallPlaceHolder");
         throwPlaceholder = GameObject.Find("ThrowPlaceHolder");
         away = false;
-
+        audioData = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -113,11 +114,12 @@ public class HammerController : MonoBehaviour
             RecalledHammer();
             hammerState = HammerState.Static;
             Debug.Log("Hammer state is set to static!");
-
+            audioData.Play(0);
     }
     void RecalledHammer()
     {
-        
+
+       // audioData.Play(0);
         transform.position = recallPlaceholder.transform.position;
         transform.rotation = recallPlaceholder.transform.rotation;
         transform.SetParent(thorHand.transform);
