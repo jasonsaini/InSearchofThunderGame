@@ -94,7 +94,6 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        
         if (canAttack)
         {
             
@@ -108,9 +107,9 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("Special");
             }
-
+            StartCoroutine(ResetAttackCooldown());
         }
-        StartCoroutine(ResetAttackCooldown());
+        
 
     }
 
@@ -118,7 +117,6 @@ public class PlayerController : MonoBehaviour
     public void DeclanAttack() {
 
         if (canAttack) {
-
             // Attack; Left-Click
             if (Input.GetMouseButtonDown(0)) {
                 attacking = true;
@@ -127,16 +125,18 @@ public class PlayerController : MonoBehaviour
 
                 foreach(Collider enemy in hitEnemies)
                 {
-                    enemy.GetComponent<MeleeEnemyController>().TakeDamage(Damage);    
+                    Debug.Log("Hit: " + enemy.name);
+                    if (enemy.GetComponent<MeleeEnemyController>() != null)
+                        enemy.GetComponent<MeleeEnemyController>().TakeDamage(Damage);
+                    else if (enemy.GetComponent<RangedEnemyController>() != null)
+                        enemy.GetComponent<RangedEnemyController>().TakeDamage(Damage);
                 }
+                StartCoroutine(ResetAttackCooldown());
             }
             if (Input.GetMouseButton(2) && hammerController.hammerState == HammerController.HammerState.Static) {
                 animator.SetTrigger("Special");
             }
-
         }
-        StartCoroutine(ResetAttackCooldown());
-
     }
 
     IEnumerator ResetAttackCooldown()
@@ -235,18 +235,18 @@ public class PlayerController : MonoBehaviour
         {
             health -= 20;
         }
-        else if (other.CompareTag("EnemyMelee"))
-        {
-            health -= 10;
-        }
+        //else if (other.CompareTag("EnemyMelee"))
+        //{
+        //    health -= 10;
+        //}
     }
 
-    private void SetTrap()
-    {
-        Vector3 trapPos = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
-        Instantiate(lightningTrap, trapPos, transform.rotation);
-        lightningTrap.SetActive(true);
-    }
+    //private void SetTrap()
+    //{
+    //    Vector3 trapPos = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
+    //    Instantiate(lightningTrap, trapPos, transform.rotation);
+    //    lightningTrap.SetActive(true);
+    //}
 
     private void Execution()
     {
@@ -260,6 +260,22 @@ public class PlayerController : MonoBehaviour
             return;
         Gizmos.DrawSphere(attackPoint.position, attackRange);
     }
+
+    public void TakeDamage(float damage) {
+        health -= damage;
+        healthbar.GetComponentInChildren<ParticleSystem>().Play();
+        //animator.SetTrigger("HitReacting");
+
+        if (health <= 0) {
+            _rb.velocity = Vector3.zero;
+            animator.SetTrigger("Dead");
+            //animator.SetBool("Attacking", false);
+            //animator.SetBool("Moving", false);
+            animator.SetTrigger("Dead");
+
+        }
+    }
+
 }
 
 

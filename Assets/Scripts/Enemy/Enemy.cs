@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] public float Health = 100f;
-    [SerializeField] private float Damage = 20f;
+    public Animator animator;
+    [SerializeField] private const float MAX_HEALTH = 100f;
+    [SerializeField] private float health = 100f;
+    [SerializeField] private Healthbar hb;
+    bool melee;
     public bool dead = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Health <= 0)
+        if(health <= 0)
         {
             dead = true;
         }
+    }
+
+    public void TakeDamage(float damage) {
+        health -= damage;
+        animator.SetTrigger("HitReacting");
+
+        if (health <= 0) {
+            dead = true;
+            animator.SetBool("Attacking", false);
+            animator.SetBool("Moving", false);
+            animator.SetTrigger("Dead");
+        }
+
+        hb.updateHealthBar(health, MAX_HEALTH);
     }
 
 }

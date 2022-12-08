@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangedEnemyController : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    //[SerializeField] private Animator animator;
     [SerializeField] public float Health = 100f;
     public float MAX_HEALTH = 100f;
     
@@ -28,7 +28,7 @@ public class RangedEnemyController : MonoBehaviour
     void Start()
     {
         
-        animator = GetComponentInChildren<Animator>();
+        //animator = GetComponentInChildren<Animator>(); // Where is this???
         Thor = GameObject.Find("Thor").GetComponent<PlayerController>();
     }
 
@@ -36,8 +36,7 @@ public class RangedEnemyController : MonoBehaviour
     {
         if (Health <= 0)
         {
-
-            animator.SetTrigger("Dead");
+            //animator.SetTrigger("Dead"); // Can this even run?
             dead = true;
            
         }
@@ -78,22 +77,23 @@ public class RangedEnemyController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Hammer")
+    //    {
+    //        if(Thor.attacking)
+    //        {
+    //            Health -= 15;
+    //        }    
+    //    }
+    //}
 
+    public void TakeDamage(float damage) {
+        Health -= damage;
+        //animator.SetTrigger("HitReacting");
         hb.updateHealthBar(MAX_HEALTH, Health);
-    
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Hammer")
-        {
-            if(Thor.attacking)
-            {
-                Health -= 15;
-            }    
+        if (Health <= 0) {
+            dead = true;
         }
     }
 }

@@ -9,6 +9,10 @@ public class MeleeEnemyController : MonoBehaviour
     [SerializeField] private const float MAX_HEALTH = 100f;
     [SerializeField] public float health = 100f;
     [SerializeField] private float damage = 20f;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange = .5f;
+    public LayerMask enemyLayers;
+
     private bool dead = false;
 
     public Healthbar hb; 
@@ -16,6 +20,9 @@ public class MeleeEnemyController : MonoBehaviour
     public PlayerController Thor;
     public UnityEngine.AI.NavMeshAgent enemy;
     public Vector3 lastEnemyvelocity;
+
+    [SerializeField] public float attackCooldown = 0.5f;
+    private bool canAttack = true;
 
     [SerializeField] private Healthbar healthbar;
 
@@ -35,7 +42,7 @@ public class MeleeEnemyController : MonoBehaviour
         {
             Look();
             Chase();
-            Attack();
+            DeclanAttack();
             healthbar.updateHealthBar(MAX_HEALTH, health);
         }
 
@@ -50,29 +57,61 @@ public class MeleeEnemyController : MonoBehaviour
     }
     void Chase()
     {
-        animator.SetBool("Attacking", false);
+        //animator.SetTrigger("Attacking", false);
         animator.SetBool("Moving", true);
         enemy.SetDestination(playerLocation.position);
     }
-    void Attack()
-    {
 
-        if (enemy.remainingDistance < enemy.stoppingDistance)
-        {
-            // stop running attacking
-            lastEnemyvelocity = enemy.velocity;
-            enemy.velocity = Vector3.zero;
-            // play attack animation
-            animator.SetBool("Attacking", true);
-            animator.SetBool("Moving", false);
+    //void Attack()
+    //{
+    //    if (enemy.remainingDistance < enemy.stoppingDistance)
+    //    {
+    //        // stop running attacking
+    //        lastEnemyvelocity = enemy.velocity;
+    //        enemy.velocity = Vector3.zero;
+    //        // play attack animation
+    //        animator.SetBool("Attacking", true);
+    //        animator.SetBool("Moving", false);
           
+    //    }
+    //    else
+    //    {
+    //        animator.enabled = true;
+    //        enemy.velocity = lastEnemyvelocity;
+    //    }
+    //}
+
+    void DeclanAttack()
+    {
+        if (enemy.remainingDistance < enemy.stoppingDistance) {
+            if (canAttack) {
+                // stop running attacking
+                lastEnemyvelocity = enemy.velocity;
+                enemy.velocity = Vector3.zero;
+                // play attack animation
+                animator.SetTrigger("Attack");
+                animator.SetBool("Moving", false);
+                Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+                foreach (Collider enemy in hitEnemies)
+                    enemy.GetComponent<PlayerController>().TakeDamage(damage);
+
+                StartCoroutine(ResetAttackCooldown());
+            }
+
         }
-        else
-        {
+        else {
             animator.enabled = true;
             enemy.velocity = lastEnemyvelocity;
         }
     }
+
+    IEnumerator ResetAttackCooldown() {
+        canAttack = false;
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+    }
+
     void Look()
     {
         this.transform.LookAt(playerLocation);
@@ -101,4 +140,9 @@ public class MeleeEnemyController : MonoBehaviour
         }
     }
 
+    void OnDrawGizmosSelected() {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawSphere(attackPoint.position, attackRange);
+    }
 }
