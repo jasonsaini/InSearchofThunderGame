@@ -87,10 +87,11 @@ public class PlayerController : MonoBehaviour
                 gameOver.Setup();
             }
         }
+
         healthbar.value = health;
         if (dead)
         {
-            FindObjectOfType<GameManager>().EndGame();
+            gameOver.Setup();
         }
     }
 

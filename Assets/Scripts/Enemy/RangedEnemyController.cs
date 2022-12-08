@@ -8,7 +8,7 @@ public class RangedEnemyController : MonoBehaviour
     [SerializeField] public float Health = 100f;
     public float MAX_HEALTH = 100f;
     
-    [SerializeField] public float Damage = 20f;
+    [SerializeField] public float Damage = 10f;
     private bool dead = false;
     private bool stopped = false;
     public float speed;

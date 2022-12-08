@@ -117,7 +117,7 @@ public class DeclanHammerController : MonoBehaviour {
             if (enemy.GetComponent<MeleeEnemyController>() != null)
                 enemy.GetComponent<MeleeEnemyController>().TakeDamage(damage);
             else if (enemy.GetComponent<RangedEnemyController>() != null)
-                enemy.GetComponent<RangedEnemyController>().TakeDamage(damage);
+                enemy.GetComponent<RangedEnemyController>().TakeDamage(30f);
         }
     }
 

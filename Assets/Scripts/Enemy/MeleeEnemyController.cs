@@ -15,7 +15,7 @@ public class MeleeEnemyController : MonoBehaviour
 
     private bool dead = false;
 
-    public Healthbar hb; 
+    
     public Transform playerLocation;
     public PlayerController Thor;
     public UnityEngine.AI.NavMeshAgent enemy;
@@ -47,7 +47,6 @@ public class MeleeEnemyController : MonoBehaviour
             healthbar.updateHealthBar(MAX_HEALTH, health);
         }
 
-        hb.updateHealthBar(health, MAX_HEALTH);
         
     }
 
@@ -111,7 +110,7 @@ public class MeleeEnemyController : MonoBehaviour
     {
         health -= damage;
         animator.SetTrigger("HitReacting");
-
+        healthbar.updateHealthBar(MAX_HEALTH, health);
         if (health <= 0) {
 
             dead = true;
