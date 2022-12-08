@@ -9,6 +9,7 @@ public class DeclanHammerController : MonoBehaviour {
     private GameObject recallPlaceholder;
     private Rigidbody rb;
     [SerializeField] private float damage = 10f;
+    [SerializeField] private MeshCollider mesh;
 
     public float flightSpeed = 10f;
     public float returnDistance = 5f;
@@ -51,11 +52,13 @@ public class DeclanHammerController : MonoBehaviour {
 
     void FixedUpdate() {
         if (Input.GetMouseButtonDown(1) && hammerState == HammerState.Static) {
+            mesh.enabled = true;
             hammerState = HammerState.Thrown;
         }
 
         if (Input.GetMouseButton(2)) {
             hammerState = HammerState.Returning;
+            mesh.enabled = false;
             HammerReturn2();
         }
         if (hammerState == HammerState.Thrown) {
@@ -63,7 +66,6 @@ public class DeclanHammerController : MonoBehaviour {
         }
         if (hammerState == HammerState.Returning) {
             
-
         }
     }
 
