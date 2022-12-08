@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float attackCooldown = 1.0f;
     [SerializeField] private Slider healthbar;
     public bool attacking;
-    private bool dead;
+    public bool dead;
     // Temp. Variables
     private Vector3 _input;
     public bool moving = false;

@@ -20,16 +20,17 @@ public class RangedEnemyController : MonoBehaviour
     
     public float shotInterval;
     public float startShotInterval;
-    public PlayerController Thor;
+    public PlayerController playerController;
     public GameObject projectile;
-    public Transform player;
+    public Transform playerTransform;
 
     // Start is called before the first frame update
     void Start()
     {
         
         //animator = GetComponentInChildren<Animator>(); // Where is this???
-        Thor = GameObject.Find("Thor").GetComponent<PlayerController>();
+        playerController = GameObject.Find("Thor").GetComponent<PlayerController>();
+        playerTransform = GameObject.Find("Thor").GetComponent<Transform>();
     }
 
     private void FixedUpdate()
@@ -40,21 +41,21 @@ public class RangedEnemyController : MonoBehaviour
             dead = true;
            
         }
-        transform.LookAt(player);
+        transform.LookAt(playerTransform);
         if (!stopped)
         {
-            if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
+            if (Vector3.Distance(transform.position, playerTransform.position) > stoppingDistance)
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
 
             }
-            else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
+            else if (Vector3.Distance(transform.position, playerTransform.position) < stoppingDistance && Vector3.Distance(transform.position, playerTransform.position) > retreatDistance)
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
             }
-            else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
+            else if (Vector3.Distance(transform.position, playerTransform.position) < retreatDistance)
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
 
             }
             else
@@ -67,7 +68,7 @@ public class RangedEnemyController : MonoBehaviour
         if (shotInterval <= 0)
         {
             projectilePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-            transform.LookAt(player);
+            transform.LookAt(playerTransform);
             Instantiate(projectile, projectilePos, transform.rotation);
             shotInterval = startShotInterval;
         }

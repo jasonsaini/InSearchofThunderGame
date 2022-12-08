@@ -58,28 +58,13 @@ public class MeleeEnemyController : MonoBehaviour
     void Chase()
     {
         //animator.SetTrigger("Attacking", false);
-        animator.SetBool("Moving", true);
-        enemy.SetDestination(playerLocation.position);
+        if (!Thor.dead)
+        {
+            animator.SetBool("Moving", true);
+            enemy.SetDestination(playerLocation.position);
+        }
+        
     }
-
-    //void Attack()
-    //{
-    //    if (enemy.remainingDistance < enemy.stoppingDistance)
-    //    {
-    //        // stop running attacking
-    //        lastEnemyvelocity = enemy.velocity;
-    //        enemy.velocity = Vector3.zero;
-    //        // play attack animation
-    //        animator.SetBool("Attacking", true);
-    //        animator.SetBool("Moving", false);
-          
-    //    }
-    //    else
-    //    {
-    //        animator.enabled = true;
-    //        enemy.velocity = lastEnemyvelocity;
-    //    }
-    //}
 
     void DeclanAttack()
     {
@@ -114,19 +99,15 @@ public class MeleeEnemyController : MonoBehaviour
 
     void Look()
     {
-        this.transform.LookAt(playerLocation);
+        if(!Thor.dead)
+        {
+            this.transform.LookAt(playerLocation);
+        }
+        
     }
-    // Uncomment, Declan
-    //void onTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject.tag == "Mjolnir")
-    //    {
-    //        health -= 25;
-    //        animator.SetTrigger("HitReacting");
-    //    }
-    //}
 
-    public void TakeDamage(float damage){
+    public void TakeDamage(float damage)
+    {
         health -= damage;
         animator.SetTrigger("HitReacting");
 
