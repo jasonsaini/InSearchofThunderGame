@@ -1455,7 +1455,7 @@ MonoBehaviour:
   stoppingDistance: 5
   retreatDistance: 2.5
   hb: {fileID: 4834169355576269303}
-  shotInterval: 8
+  shotInterval: 4
   startShotInterval: 2
   playerController: {fileID: 0}
   projectile: {fileID: 4603379965563567533, guid: d0b483e701bbca54ca040be7f0a2feee,
