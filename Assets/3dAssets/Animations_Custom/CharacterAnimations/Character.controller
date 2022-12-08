@@ -126,7 +126,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Basic Attack
-  m_Speed: 2
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1672456140095901915}
@@ -637,13 +637,13 @@ AnimatorStateMachine:
     m_Position: {x: 310, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8889577347622525566}
-    m_Position: {x: 510, y: -100, z: 0}
+    m_Position: {x: 660, y: -140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8577315094668588840}
-    m_Position: {x: 510, y: -40, z: 0}
+    m_Position: {x: 660, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6205137617783001296}
-    m_Position: {x: 510, y: 20, z: 0}
+    m_Position: {x: 660, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6391216519607147704}
     m_Position: {x: 550, y: 190, z: 0}
@@ -682,9 +682,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.91573036
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0.013283261
+  m_ExitTime: 0.99353635
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

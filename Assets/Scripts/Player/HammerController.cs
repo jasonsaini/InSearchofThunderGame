@@ -30,7 +30,7 @@ public class HammerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Thor = GameObject.Find("Thor");
+        Thor = GameObject.Find("Thor(1)"); // Declan, change back
         animator = Thor.GetComponent<Animator>();
         thorHand = GameObject.Find("Thor_Hand_R");
         recallPlaceholder = GameObject.Find("RecallPlaceHolder");

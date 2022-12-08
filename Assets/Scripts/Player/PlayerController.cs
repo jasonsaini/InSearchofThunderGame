@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; // Required when Using UI elements.
 
 
 public class PlayerController : MonoBehaviour
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float health = MAX_HEALTH;
     [SerializeField] private float Damage = 20f;
     [SerializeField] public float attackCooldown = 1.0f;
-    [SerializeField] private Healthbar healthbar;
+    [SerializeField] private Slider healthbar;
     public bool attacking;
     private bool dead;
     // Temp. Variables
@@ -44,6 +45,9 @@ public class PlayerController : MonoBehaviour
     // mjolnir variables
     public GameObject mjolnir;
     public HammerController hammerController;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange = .5f;
+    public LayerMask enemyLayers;
 
 
     private void Start()
@@ -51,10 +55,11 @@ public class PlayerController : MonoBehaviour
         dead = false;
         // Fetch Objects
         animator = GetComponentInChildren<Animator>();
-        healthbar = this.GetComponent<Healthbar>();
+        //healthbar = this.GetComponent<Healthbar>();
         mjolnir =  GameObject.Find("Mjolnir");
         hammerController = mjolnir.GetComponent<HammerController>();
         bigBad = GameObject.Find("BigBad").GetComponent<BigBad>();
+        healthbar.maxValue = MAX_HEALTH;
     }
 
     private void Update()
@@ -72,7 +77,7 @@ public class PlayerController : MonoBehaviour
             GatherInput();
             Look();
             Dash();
-            Attack();    
+            DeclanAttack();    
         }
         if (health <= 0) { 
             {
@@ -80,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Dead");
             }
         }
-        healthbar.updateHealthBar(MAX_HEALTH, health);
+        healthbar.value = health;
         if (dead)
         {
             FindObjectOfType<GameManager>().EndGame();
@@ -108,7 +113,32 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(ResetAttackCooldown());
 
     }
-    
+
+
+    public void DeclanAttack() {
+
+        if (canAttack) {
+
+            // Attack; Left-Click
+            if (Input.GetMouseButtonDown(0)) {
+                attacking = true;
+                animator.SetTrigger("Slash");
+                Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+                foreach(Collider enemy in hitEnemies)
+                {
+                    enemy.GetComponent<MeleeEnemyController>().TakeDamage(Damage);    
+                }
+            }
+            if (Input.GetMouseButton(2) && hammerController.hammerState == HammerController.HammerState.Static) {
+                animator.SetTrigger("Special");
+            }
+
+        }
+        StartCoroutine(ResetAttackCooldown());
+
+    }
+
     IEnumerator ResetAttackCooldown()
     {
        
@@ -151,7 +181,7 @@ public class PlayerController : MonoBehaviour
             
             animator.SetTrigger("Dash");
             // instantiate lightning trap
-            SetTrap();
+            // SetTrap();
         }
 
         if (canDash == false) {
@@ -224,7 +254,15 @@ public class PlayerController : MonoBehaviour
         transform.Translate(transform.position.x, transform.position.y + 2, transform.position.z);
         health = 0;
     }
+
+    void OnDrawGizmosSelected() {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawSphere(attackPoint.position, attackRange);
+    }
 }
+
+
 
 
 public static class Helpers

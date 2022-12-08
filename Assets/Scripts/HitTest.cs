@@ -21,12 +21,12 @@ public class HitTest : MonoBehaviour
         if (anim.GetBool("Attacking") == true)
         {
             GetComponent<BoxCollider>().enabled = true;
-            Debug.Log("Melee weapon enabled!");
+            //Debug.Log("Melee weapon enabled!");
         }
         else
         {
             GetComponent<BoxCollider>().enabled = false;
-            Debug.Log("Melee weapon disabled!");
+            //Debug.Log("Melee weapon disabled!");
         }
     }
 

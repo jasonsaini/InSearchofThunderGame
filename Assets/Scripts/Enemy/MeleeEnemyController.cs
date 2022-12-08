@@ -6,7 +6,7 @@ using UnityEngine;
 public class MeleeEnemyController : MonoBehaviour
 {
     public Animator animator;
-    public const float MAX_HEALTH = 100f;
+    [SerializeField] private const float MAX_HEALTH = 100f;
     [SerializeField] public float health = 100f;
     [SerializeField] private float damage = 20f;
     private bool dead = false;
@@ -38,15 +38,7 @@ public class MeleeEnemyController : MonoBehaviour
             Attack();
             healthbar.updateHealthBar(MAX_HEALTH, health);
         }
-        if (health <= 0)
-        {
 
-            dead = true;
-            animator.SetBool("Attacking", false);
-            animator.SetBool("Moving", false);
-            animator.SetTrigger("Dead");
-
-        }
         hb.updateHealthBar(health, MAX_HEALTH);
         
     }
@@ -85,13 +77,27 @@ public class MeleeEnemyController : MonoBehaviour
     {
         this.transform.LookAt(playerLocation);
     }
+    // Uncomment, Declan
+    //void onTriggerEnter(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Mjolnir")
+    //    {
+    //        health -= 25;
+    //        animator.SetTrigger("HitReacting");
+    //    }
+    //}
 
-    void onTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Mjolnir")
-        {
-            health -= 25;
-            animator.SetTrigger("HitReacting");
+    public void TakeDamage(float damage){
+        health -= damage;
+        animator.SetTrigger("HitReacting");
+
+        if (health <= 0) {
+
+            dead = true;
+            animator.SetBool("Attacking", false);
+            animator.SetBool("Moving", false);
+            animator.SetTrigger("Dead");
+
         }
     }
 
