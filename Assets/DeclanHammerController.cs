@@ -91,7 +91,7 @@ public class DeclanHammerController : MonoBehaviour {
 
         RecalledHammer();
         hammerState = HammerState.Static;
-        Debug.Log("Hammer state is set to static!");
+        //Debug.Log("Hammer state is set to static!");
         audioData.Play(0);
     }
     void RecalledHammer() {
@@ -109,6 +109,7 @@ public class DeclanHammerController : MonoBehaviour {
     private void OnTriggerEnter(Collider enemy) {
         if (enemy.gameObject.layer == LayerMask.NameToLayer("Enemies"))
         {
+            //Debug.Log("Hit: " + enemy.name);
             //other.gameObject.GetComponent<Animator>().SetTrigger("HitReacting");
             //other.gameObject.GetComponent<MeleeEnemyController>().health -= 30;
             if (enemy.GetComponent<MeleeEnemyController>() != null)
