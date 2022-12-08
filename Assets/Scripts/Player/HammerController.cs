@@ -137,7 +137,11 @@ public class HammerController : MonoBehaviour
             other.gameObject.GetComponent<Animator>().SetTrigger("HitReacting");
             other.gameObject.GetComponent<MeleeEnemyController>().health -= 30;
         }
+        if(other.gameObject.tag == "RangedEnemy")
+        {
+                        
+        }
     }
 
-
 }
+    

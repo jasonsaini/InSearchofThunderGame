@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour
 
     public void restartButton()
     {
-        SceneManager.LoadScene("JasonCombatTest");
+        SceneManager.LoadScene("BigArena1");
     }
 
     public void exitButton()
