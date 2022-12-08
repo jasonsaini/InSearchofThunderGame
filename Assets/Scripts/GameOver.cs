@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     // Start is called before the first frame update
+
     public void Setup()
     {
         gameObject.SetActive(true);
@@ -18,7 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void exitButton()
     {
-
+        SceneManager.LoadScene("TitleScreen");
     }
     // Update is called once per frame
     public void Update()
