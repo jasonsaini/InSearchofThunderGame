@@ -107,6 +107,7 @@ public class HammerController : MonoBehaviour
         hammerState = HammerState.Static;
         // TODO: play hammer return sound effect
     }
+
     void HammerReturn2()
     {
 
@@ -133,7 +134,7 @@ public class HammerController : MonoBehaviour
     {
         if(other.gameObject.tag == "MeleeEnemy")
         {
-                other.gameObject.GetComponent<Animator>().SetTrigger("HitReacting");
+            other.gameObject.GetComponent<Animator>().SetTrigger("HitReacting");
             other.gameObject.GetComponent<MeleeEnemyController>().health -= 30;
         }
     }

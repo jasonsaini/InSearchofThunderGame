@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     public HammerController hammerController;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = .5f;
+    [SerializeField] GameOver gameOver;
     public LayerMask enemyLayers;
 
 
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
             {
                 _rb.velocity = Vector3.zero;
                 animator.SetTrigger("Dead");
+                gameOver.Setup();
             }
         }
         healthbar.value = health;

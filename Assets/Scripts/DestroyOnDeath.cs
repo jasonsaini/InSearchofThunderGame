@@ -6,12 +6,10 @@ public class DestroyOnDeath : StateMachineBehaviour
 {
     GameManager manager;
     GameObject gameOverScreen;
-    GameOver gameOver;
-   private void OnEnable()
-   {
-        manager = FindObjectOfType<GameManager>();
-        gameOverScreen =  GameObject.FindWithTag("GameOver");
-        gameOver = gameOverScreen.GetComponent<GameOver>();
+    [SerializeField] GameOver gameOver;
+    private void OnEnable()
+    {
+        //gameOver = GameObject.Find("GameOver");
     }
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
