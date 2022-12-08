@@ -38,7 +38,7 @@ public class MeleeEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!dead)
+        if (!dead && !Thor.dead)
         {
             Look();
             Chase();

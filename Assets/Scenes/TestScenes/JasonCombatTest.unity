@@ -609,13 +609,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39850535}
   m_LocalRotation: {x: -0, y: 0.9991241, z: -0, w: -0.041845493}
-  m_LocalPosition: {x: -9.7, y: 1.1951123, z: 2.84}
+  m_LocalPosition: {x: -9.7, y: 0.33491564, z: 2.830567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 798020477}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1061304196}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 184.797, z: 0}
 --- !u!1 &46894452
 GameObject:
@@ -1308,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4526463827110206, guid: 5aed7f791a03c2a4ba0040d2fa161639, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4526463827110206, guid: 5aed7f791a03c2a4ba0040d2fa161639, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1455,7 +1455,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &182106430 stripped
 GameObject:
@@ -7033,6 +7033,7 @@ MonoBehaviour:
   attackCooldown: 1
   healthbar: {fileID: 0}
   attacking: 0
+  dead: 0
   moving: 0
   canAttack: 1
   bigBadKill: 0
@@ -13715,7 +13716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1061304196
 Transform:
   m_ObjectHideFlags: 0
@@ -13729,8 +13730,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1854220202}
+  - {fileID: 39850536}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073118003 stripped
 GameObject:
@@ -18713,7 +18715,7 @@ Transform:
   m_Children:
   - {fileID: 1573915015}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1609699439
 MonoBehaviour:
@@ -21975,10 +21977,10 @@ MonoBehaviour:
   hb: {fileID: 1854220213}
   shotInterval: 8
   startShotInterval: 2
-  Thor: {fileID: 7272222015787190814}
+  playerController: {fileID: 0}
   projectile: {fileID: 4603379965563567533, guid: d0b483e701bbca54ca040be7f0a2feee,
     type: 3}
-  player: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!195 &1854220210
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27674,7 +27676,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968608769
 GameObject:
@@ -28532,6 +28534,7 @@ MonoBehaviour:
   attackCooldown: 1
   healthbar: {fileID: 0}
   attacking: 0
+  dead: 0
   moving: 0
   canAttack: 1
   bigBadKill: 0
@@ -28887,7 +28890,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2143917842
 PrefabInstance:
@@ -30126,6 +30129,7 @@ MonoBehaviour:
   attackCooldown: 0.1
   healthbar: {fileID: 308333024}
   attacking: 0
+  dead: 0
   moving: 0
   canAttack: 1
   bigBadKill: 0
@@ -30695,7 +30699,7 @@ Transform:
   - {fileID: 6445463050570440330}
   - {fileID: 259688862}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7327461763991116053
 Transform:

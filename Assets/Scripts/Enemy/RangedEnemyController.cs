@@ -37,32 +37,34 @@ public class RangedEnemyController : MonoBehaviour
     {
         if (Health <= 0)
         {
-            //animator.SetTrigger("Dead"); // Can this even run?
             dead = true;
-           
         }
         transform.LookAt(playerTransform);
-        if (!stopped)
+        if(!dead && !playerController.dead)
         {
-            if (Vector3.Distance(transform.position, playerTransform.position) > stoppingDistance)
+            if (!stopped)
             {
-                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
+                if (Vector3.Distance(transform.position, playerTransform.position) > stoppingDistance)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
 
-            }
-            else if (Vector3.Distance(transform.position, playerTransform.position) < stoppingDistance && Vector3.Distance(transform.position, playerTransform.position) > retreatDistance)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
-            }
-            else if (Vector3.Distance(transform.position, playerTransform.position) < retreatDistance)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
+                }
+                else if (Vector3.Distance(transform.position, playerTransform.position) < stoppingDistance && Vector3.Distance(transform.position, playerTransform.position) > retreatDistance)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
+                }
+                else if (Vector3.Distance(transform.position, playerTransform.position) < retreatDistance)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
 
-            }
-            else
-            {
-                stopped = true;
+                }
+                else
+                {
+                    stopped = true;
+                }
             }
         }
+        
 
         Vector3 projectilePos;
         if (shotInterval <= 0)
@@ -78,16 +80,6 @@ public class RangedEnemyController : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject.tag == "Hammer")
-    //    {
-    //        if(Thor.attacking)
-    //        {
-    //            Health -= 15;
-    //        }    
-    //    }
-    //}
 
     public void TakeDamage(float damage) {
         Health -= damage;
