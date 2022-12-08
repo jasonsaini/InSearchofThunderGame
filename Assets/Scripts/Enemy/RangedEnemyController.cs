@@ -64,24 +64,28 @@ public class RangedEnemyController : MonoBehaviour
                 }
             }
         }
-        
 
-        Vector3 projectilePos;
-        if (shotInterval <= 0)
+
+        if (!dead && !playerController.dead)
         {
-            projectilePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-            transform.LookAt(playerTransform);
-            Instantiate(projectile, projectilePos, transform.rotation);
-            shotInterval = startShotInterval;
+
+            Vector3 projectilePos;
+            if (shotInterval <= 0)
+            {
+                projectilePos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+                transform.LookAt(playerTransform);
+                Instantiate(projectile, projectilePos, transform.rotation);
+                shotInterval = startShotInterval;
+            }
+            else
+            {
+                shotInterval -= Time.deltaTime;
+            }
         }
-        else
-        {
-            shotInterval -= Time.deltaTime;
         }
-    }
 
 
-    public void TakeDamage(float damage) {
+        public void TakeDamage(float damage) {
         Health -= damage;
         //animator.SetTrigger("HitReacting");
         hb.updateHealthBar(MAX_HEALTH, Health);
