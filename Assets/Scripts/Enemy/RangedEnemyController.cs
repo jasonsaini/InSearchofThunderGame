@@ -88,5 +88,9 @@ public class RangedEnemyController : MonoBehaviour
         if (Health <= 0) {
             dead = true;
         }
+        if(dead)
+        {
+            Destroy(this);
+        }
     }
 }
