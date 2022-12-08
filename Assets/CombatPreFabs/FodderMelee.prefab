@@ -1698,7 +1698,6 @@ GameObject:
   - component: {fileID: 7260516952066001189}
   - component: {fileID: 7260516952066001370}
   - component: {fileID: 7260516952066001190}
-  - component: {fileID: 7260516952066001185}
   m_Layer: 10
   m_Name: SkellyBoi
   m_TagString: MeleeEnemy
@@ -1852,22 +1851,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6746097, y: 2.22052, z: 2.2454338}
   m_Center: {x: -0.011811641, y: 1.137387, z: 0.62271696}
---- !u!114 &7260516952066001185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7260516952066001369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6dd789ee993f5942b8f9cbdef7436c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  health: 100
-  hb: {fileID: 0}
-  dead: 0
 --- !u!1 &7260516952074186148
 GameObject:
   m_ObjectHideFlags: 0

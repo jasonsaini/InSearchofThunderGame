@@ -32,6 +32,7 @@ public class MeleeEnemyController : MonoBehaviour
     {
         // grab player script
         Thor = GameObject.Find("Thor").GetComponent<PlayerController>();
+        playerLocation = GameObject.Find("Thor").GetComponent<Transform>();
         dead = false;
     }
 

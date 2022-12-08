@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     
     // mjolnir variables
     public GameObject mjolnir;
-    public HammerController hammerController;
+    public DeclanHammerController hammerController;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = .5f;
     [SerializeField] GameOver gameOver;
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         //healthbar = this.GetComponent<Healthbar>();
         mjolnir =  GameObject.Find("Mjolnir");
-        hammerController = mjolnir.GetComponent<HammerController>();
+        hammerController = mjolnir.GetComponent<DeclanHammerController>();
         bigBad = GameObject.Find("BigBad").GetComponent<BigBad>();
         healthbar.maxValue = MAX_HEALTH;
     }
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
                 attacking = true;
                 animator.SetTrigger("Slash");
             }
-            if (Input.GetMouseButton(2) &&  hammerController.hammerState == HammerController.HammerState.Static)
+            if (Input.GetMouseButton(2) /*&& hammerController.hammerState == HammerController.HammerState.Static*/)
             {
                 animator.SetTrigger("Special");
             }
@@ -134,9 +134,9 @@ public class PlayerController : MonoBehaviour
                 }
                 StartCoroutine(ResetAttackCooldown());
             }
-            if (Input.GetMouseButton(2) && hammerController.hammerState == HammerController.HammerState.Static) {
-                animator.SetTrigger("Special");
-            }
+            //if (Input.GetMouseButton(2) && hammerController.hammerState == HammerController.HammerState.Static) {
+            //    animator.SetTrigger("Special");
+            //}
         }
     }
 
