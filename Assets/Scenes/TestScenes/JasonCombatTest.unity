@@ -7157,6 +7157,7 @@ MonoBehaviour:
   hammerController: {fileID: 0}
   attackPoint: {fileID: 0}
   attackRange: 0.5
+  gameOver: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -19082,7 +19083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1609699438
 Transform:
   m_ObjectHideFlags: 0
@@ -28037,7 +28038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1966352788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28050,6 +28051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359a5a70fc1083c4abdd2c2f52ade03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
 --- !u!4 &1966352789
 Transform:
   m_ObjectHideFlags: 0
@@ -28928,6 +28930,7 @@ MonoBehaviour:
   hammerController: {fileID: 0}
   attackPoint: {fileID: 0}
   attackRange: 0.5
+  gameOver: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -30317,17 +30320,17 @@ PrefabInstance:
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000014901161
+      value: -0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802322
+      value: -0.000000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245023326236, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000022351742
+      value: 0.000000022351742
       objectReference: {fileID: 0}
     - target: {fileID: 6804746245557329023, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -30387,17 +30390,17 @@ PrefabInstance:
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23519199
+      value: 0.23519197
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.37007573
+      value: 0.37007567
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09741973
+      value: -0.09741972
       objectReference: {fileID: 0}
     - target: {fileID: 6804746246184448754, guid: 98e74b8cb654a48c1ad442a6d4cc7444,
         type: 3}
@@ -30577,6 +30580,7 @@ MonoBehaviour:
   hammerController: {fileID: 0}
   attackPoint: {fileID: 259688862}
   attackRange: 1
+  gameOver: {fileID: 1609699439}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 1024
