@@ -43,7 +43,7 @@ public class HammerController : MonoBehaviour
     void Update()
     { 
         // return to thor if retreat distance
-        if (Vector3.Distance(Thor.transform.position, transform.position) >= returnDistance) {
+        if (Vector3.Distance(transform.root.position, transform.position) >= returnDistance) {
 
             rb.velocity = Vector3.zero;
             

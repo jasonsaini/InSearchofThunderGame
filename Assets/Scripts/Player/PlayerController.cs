@@ -125,7 +125,6 @@ public class PlayerController : MonoBehaviour
 
                 foreach(Collider enemy in hitEnemies)
                 {
-                    Debug.Log("Hit: " + enemy.name);
                     if (enemy.GetComponent<MeleeEnemyController>() != null)
                         enemy.GetComponent<MeleeEnemyController>().TakeDamage(Damage);
                     else if (enemy.GetComponent<RangedEnemyController>() != null)
@@ -233,7 +232,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("EnemyProjectile"))
         {
-            health -= 20;
+            TakeDamage(20);
         }
         //else if (other.CompareTag("EnemyMelee"))
         //{
@@ -277,9 +276,6 @@ public class PlayerController : MonoBehaviour
     }
 
 }
-
-
-
 
 public static class Helpers
 {
